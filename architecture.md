@@ -5,21 +5,18 @@ explain and evidence data strategy impact in federated organisations.
 
 ## What this repo contains
 
-- **Conceptual HTML dashboard**  Done
+- **Done - Conceptual HTML dashboard**
   `html/model_department_dashboard.html` – ready for demos, training and workshops.
 
-- **Excel input model (template)**  Next
+- **Next - Excel input model (template)**
   `templates/excel/data_strategy_impact_template.xlsx` – single source of truth
   for Level 1, Level 2, Level 3, executive decisions and measurement methods.
 
-- **Excel → PowerPoint generator (Python)**  Later
+- **Next - Excel → PowerPoint generator (Python)**
   `scripts/excel_to_ppt.py` – turns a completed Excel template into a
   board-ready slide deck.
 
-- **Docs**  Later
-  `docs/overview.md` – the three-level causal model and how to use it.
-
-## Concept in one picture
+## Causal model 
 
 (Embed `docs/img/architecture-diagram.png` here.)
 
