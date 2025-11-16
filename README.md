@@ -1,3 +1,10 @@
+![Public Sector](https://img.shields.io/badge/Public%20Sector-Data%20Leadership-blue)
+![Reusable Template](https://img.shields.io/badge/Reusable-Template-success)
+![Static HTML](https://img.shields.io/badge/Format-HTML%20Dashboard-lightgrey)
+![Talk Included](https://img.shields.io/badge/Talk-Included-blueviolet)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
+
 # Model Department X - Data Strategy Impact Dashboard
 
 A lightweight, executive friendly dashboard for public sector data leaders who want to show how data strategy work creates impact in a federated organisation.
