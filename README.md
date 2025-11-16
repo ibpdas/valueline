@@ -145,6 +145,14 @@ This framework helps public sector teams:
 
 ---
 
+Status
+
+✅ HTML conceptual dashboard
+🟡 Excel template (MVP)
+🟡 PowerPoint generator script (MVP)
+⬜ Streamlit app (future)
+
+---
 ## Limitations
 
 - All data and examples are **synthetic**  
