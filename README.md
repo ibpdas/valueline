@@ -1,164 +1,132 @@
 ![Public Sector](https://img.shields.io/badge/Public%20Sector-Data%20Leadership-blue)
 ![Reusable Template](https://img.shields.io/badge/Reusable-Template-success)
-![Static HTML](https://img.shields.io/badge/Format-HTML%20Dashboard-lightgrey)
 ![Talk Included](https://img.shields.io/badge/Talk-Included-blueviolet)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![AI Confident](https://img.shields.io/badge/Framework-AI%20Confident-brightgreen)
 
 
-# Model Department X - Data Strategy Impact Dashboard
-
-A lightweight, executive friendly dashboard for public sector data leaders who want to show how data strategy work creates impact in a federated organisation.
-
-This is a synthetic "model department" example. It gives you a starting point to build your own view of data strategy impact using a simple three level causal model and a mix of leading and lagging indicators.
+# Data Strategy Impact Dashboard 
+A simple three level framework to help public sector data leaders explain, track and demonstrate data strategy impact in complex or federated organisations.
 
 ---
 
-## What this is
+## 1. What the model solves  
+Most public sector organisations find it difficult to show how data strategy activity leads to maturity and then to outcomes.  
+The problem is attribution.  
+Data teams often control the inputs but not the outcomes.
 
-This project provides:
+This model brings clarity by structuring the story into three causal levels:
 
-- A single page **HTML dashboard** you can open in any browser  
-- A clear **three level causal model** for data strategy impact  
-- A simple way to distinguish **leading, signal and lagging indicators**  
-- Text that you can reuse and adapt for your own organisation  
+1. **Level 1. Build the foundational enablers**  
+   Conditions that data leaders and teams directly control.  
+   These include strategy alignment, shared leadership, foundations, community, engagement.
 
-It is designed for public sector settings where:
+2. **Level 2. Enable maturity**  
+   How the wider system behaves when Level 1 is working.  
+   Uses, data, leadership, culture, tools and skills all develop toward a more capable and sustainable data ecosystem.
 
-- Data leadership is **federated** across multiple directorates or ALBs  
-- Control over outcomes is **partial**, shared with other functions  
-- Senior leaders want to see **impact, maturity and trade offs** on one page  
+3. **Level 3. Influence outcomes**  
+   Public value created when maturity is in place.  
+   Financial savings, user satisfaction, time savings, operational efficiency, and public good contributions.
 
-All figures and examples are synthetic. They do not represent any real organisation.
+This creates a clean chain of reasoning:  
+**Level 1 activities produce Level 2 maturity which shapes Level 3 outcomes.**
 
 ---
 
-## The three level causal model
+## 2. The three levels at a glance
 
-The dashboard is built around three linked levels.
+### Level 1. Build the foundational enablers  
+Conditions under direct control. These unlock maturity.  
+Examples:  
+- Cross cutting data priorities  
+- Shared ownership and decision making  
+- Common foundations and standards  
+- Strong data communities  
+- Cross functional engagement
 
-### Level 1 - Build the enabling foundations
-
-Foundational conditions under data team's control and influence (examples below are illustrative):
-
-- Strategy: Co-created, cross-cutting priorities and roadmap 
-- Shared leadership: Directions for both common and federated capabilties
-- Foundation: Essential policies, standards for adoptions
-- Community: Peer working and knowledge sharing for grassroot and sideways change  
-- Engagement: Cross-functional and cross-orgnisational join-working for adoting data first approach   
-
-These are shown as RAG rated pillar cards, each with a short "going well" and "needs attention" narrative. They are tagged as **LEADING** indicators because they describe conditions you can influence now.
-
-### Level 2 - Enable maturity
-
-System wide maturity across six themes using government data maturity framework (2023):
-
+### Level 2. Enable maturity  
+System capability that emerges from Level 1.  
+Government data maturity themes from Level 1 (Beginning) to Level 5 (Mastering):  
 - Uses  
 - Data  
 - Leadership  
 - Culture  
 - Tools  
-- Skills  
+- Skills
 
-Level 2 combines:
-
-- A simple **radar view** of maturity levels (1 to 5)  
-- A small table with notes for each theme  
-- Badges that show whether each theme is **LEADING**, **SIGNAL** or **LAGGING**  
-
-Level 2 is the bridge. It reflects the results of Level 1, and it shapes Level 3.
-
-### Level 3 - Influence outcomes
-
-Public value outcomes that are influenced by the first two levels:
-
+### Level 3. Influence outcomes  
+Public value indicators influenced by the first two levels:  
 - Financial savings  
 - User satisfaction  
-- Efficiency  
+- Efficiency gains  
 - Time savings  
-- Public good  
-
-These are all **LAGGING** indicators. They show realised value, not direct control.
-
-This card also includes short **impact stories** that join up numbers and narratives, for example flood modelling and land data models.
+- Public good impact across government
 
 ---
 
-## Executive decision box
+## 3. Leading, signal and lagging indicators  
+Each metric is classified so expectations are realistic:
 
-The dashboard includes an **Executive decision box** card that lists live trade offs for senior leaders. For example:
+- **Leading**: Early signs that enablers are working  
+- **Signal**: System response and behaviour change  
+- **Lagging**: Measurable public value and benefits
 
-- Balancing remediation and new capability  
-- Prioritising standards versus urgent operational delivery  
-- Allocating analytical capacity across competing demands  
-
-This reminds readers that the purpose of the view is not just monitoring. It is there to support real choices.
-
----
-
-## Measurement methods
-
-The **Measurement methods** card shows how you might collect evidence over time:
-
-- Reporting rhythms  
-- Organisational insight  
-- Adoption and capability  
-- System behaviour  
-- Public value  
-- Benefits realisation  
-
-Each line is tagged as **LEADING**, **SIGNAL** or **LAGGING** so you can see the mix at a glance. This is useful when you discuss evidence with finance, audit or strategy teams.
+This prevents unrealistic pressure to show outcomes before foundations are in place.
 
 ---
 
-## How to use this template
+## 4. Executive decision box  
+A dedicated space where leaders see:  
+- Top three asks  
+- Dependencies  
+- Trade offs  
+- Confidence levels  
+- Forward look priorities
 
-You can use this in several ways:
-
-1. **Quick start in a browser**
-
-   - Save the HTML file as `index.html`  
-   - Open it in any modern browser  
-   - Change the text, numbers and labels directly in the file  
-
-2. **Adapt for your organisation**
-
-   - Replace the "Model Department X" naming  
-   - Update the Level 1 pillars to match your strategy  
-   - Adjust maturity levels and notes based on your own assessment  
-   - Add your own impact stories, case studies and decisions  
-
-3. **Link to spreadsheets and slides**
-
-   - Use an Excel workbook to hold your underlying data  
-   - Keep the HTML as a **front door** for senior audiences  
-   - Recreate the layout in PowerPoint if you need slide ready visuals  
-
-4. **Extend to Streamlit or other tools (optional)**
-
-   - Use the same three level model as a design pattern  
-   - Replace static figures with live data from your systems  
-   - Keep the structure but allow departments or ALBs to filter their own view  
+This translates data strategy into executive action and ownership.
 
 ---
 
-## Who this is for
+## 5. Measurement methods  
+Recommended measurement cycles include:  
+- Monthly performance reports  
+- Quarterly senior leadership updates  
+- Annual maturity review  
+- Annual staff survey  
+- Event and training participation  
+- Standards adoption  
+- Dataset and model reuse  
+- Open data analytics  
+- Post implementation reviews  
+- Verified cost and time savings
 
-This template is aimed at:
-
-- Chief Data Officers and Heads of Data in the public sector  
-- Senior analysts and data leaders in federated organisations  
-- Strategy, performance and portfolio teams who want a shared frame  
-
-It is not a formal performance framework or benchmark. It is a **conversation tool** that helps people:
-
-- See the link between foundations, maturity and outcomes  
-- Talk about leading and lagging indicators in a clear way  
-- Surface trade offs and decisions in a structured format  
+These give a balanced picture of value creation and capability building.
 
 ---
 
-## Limitations and responsible use
+## 6. How this model is used  
+This framework helps public sector teams:  
+- Explain data strategy impact in a simple causal chain  
+- Engage leaders using a consistent, repeatable format  
+- Identify where to invest effort next  
+- Benchmark directorates or ALBs in federated departments  
+- Move discussions away from “where are the outcomes” to  
+  “are the enablers and system conditions in place”
+
+---
+
+## 7. What this repository provides  
+- Interactive HTML dashboard  
+- Excel input template  
+- PowerPoint generator script  
+- Architecture documentation  
+- Example synthetic datasets  
+- Streamlit app (optional)
+
+---
+
+## Limitations
 
 - All data and examples are **synthetic**  
 - The dashboard is a **learning and facilitation tool**, not an official scorecard  
