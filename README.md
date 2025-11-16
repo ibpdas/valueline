@@ -1,4 +1,9 @@
 <p align="center">
+  <a href="https://ibpdas.github.io/data-strategy-impact-dashboard/" target="_blank">
+    <img src="https://img.shields.io/badge/Open%20Dashboard-Live%20Demo-blue?style=for-the-badge" alt="Dashboard Link">
+  </a>
+</p>
+<p align="center">
   <img src="https://img.shields.io/badge/Public%20Sector-Data%20Leadership-blue" alt="Public Sector Data Leadership" />
   <img src="https://img.shields.io/badge/Reusable-Template-success" alt="Reusable Template" />
   <img src="https://img.shields.io/badge/Talk-Included-blueviolet" alt="Talk Included" />
