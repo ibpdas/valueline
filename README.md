@@ -22,9 +22,10 @@
 
 > ### 📌 Concept in 30 seconds
 > This dashboard is the result of the **ValueLine data to impact model**.  
+
 > It shows how data strategy activity and foundations (Level 1) lead to data maturity and system behaviour (Level 2) and ultimately public value outcomes (Level 3).
 >  
-> The shows a **clear causal chain**, a repeatable dashboard format, and a better way to have executive conversations, prioritise effort and make investment choices in federated organisations.
+> The shows a clear causal chain, a repeatable dashboard format, and a better way to have executive conversations, prioritise effort and make choices in federated organisations.
 
 ---
 
