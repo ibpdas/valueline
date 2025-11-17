@@ -224,18 +224,9 @@ If you reuse it, you do not need to credit the source, but a short note back is 
 
 ## 12. Author  
 
-Created by **Bandhu P. Das**, public sector data leader, qualified accountant, Imperial AI policy fellow 2025 and former DAMA UK committee member (2023 to 2024).
+ValuLine model is created by **Bandhu P. Das**, public sector data leader, qualified accountant, Imperial AI policy fellow 2025 and former DAMA UK committee member (2023 to 2024).
 
-🎤 **BrightTalk Talk – “Unlocking the Value of Data: Lessons from Public Sector Data Business Cases”**  
+🎤 **DAMA UK Talk – “Unlocking the Value of Data: Lessons from Public Sector Data Business Cases”**  
 https://www.brighttalk.com/webcast/12405/602410
 
-In this session, Bandhu explains why proving the value of data work is difficult in practice, especially in federated public sector organisations. He introduces a practical extension of the Treasury Five Case Model that incorporates engagement and change as essential enablers of impact.
-
-Drawing on more than 15 years across finance, policy and data, Bandhu discusses:
-
-- Why ROI and cost benefit analysis only capture part of data value  
-- How to articulate multi dimensional benefits that stakeholders can recognise  
-- How to build high impact data business cases that secure investment  
-- Lessons from his roles at Defra and HM Treasury on creating enterprise level value  
-
-This model builds on the same principles: making data strategy, maturity and public value **visible, explainable and fundable** in complex organisations.
+In this session, Bandhu explains why demonstrating the value of data work is challenging in federated public sector organisations. He introduces a practical extension of the Treasury Five Case Model that brings engagement and change into the core of impact. Drawing on 15 years across finance, policy and data, his approach focuses on making data strategy, maturity and public value visible, explainable and fundable in complex organisations
