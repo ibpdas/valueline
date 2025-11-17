@@ -21,11 +21,10 @@
 ---
 
 > ### 📌 Concept in 30 seconds
-> This dashboard is the result of the **ValueLine data to impact model**.  
-
-> It shows how data strategy activity and foundations (Level 1) lead to data maturity and system behaviour (Level 2) and ultimately public value outcomes (Level 3).
+> This dashboard applies the **ValueLine data to impact model**.  
+> It shows how data strategy activity and foundations (Level 1) lead to data maturity and system behaviour (Level 2) and ultimately public value outcomes (Level 3).  
 >  
-> The shows a clear causal chain, a repeatable dashboard format, and a better way to have executive conversations, prioritise effort and make choices in federated organisations.
+> It provides a clear causal chain, a repeatable dashboard format, and a better way to have executive conversations, prioritise effort and make choices in federated organisations.
 
 ---
 
@@ -34,14 +33,13 @@
 Most public sector organisations find it difficult to show how data strategy activity leads to maturity and then to outcomes.  
 
 The problem is attribution.  
-
 Data teams usually control the inputs, but not the outcomes.
 
 This model brings clarity by structuring the story into three causal levels:
 
 1. **Level 1. Build the foundational enablers**  
    Conditions that data leaders and teams directly control.  
-   These are co-designed and contextual. This example includes strategy alignment, shared leadership, common foundations, grassroot community and cross-function engagement.
+   These are co-designed and contextual. This example includes strategy alignment, shared leadership, common foundations, grassroots community and cross-functional engagement.
 
 2. **Level 2. Enable maturity**  
    How the wider system behaves when Level 1 is working.  
@@ -110,7 +108,7 @@ This helps avoid unrealistic pressure to show outcomes before foundations are in
 
 The dashboard includes an **Executive decision box** to the right of Page 1.
 
-It provides a dedicated space where leaders see:
+This provides a dedicated space for leaders to see:
 
 - Top three asks  
 - Key trade offs  
@@ -173,7 +171,7 @@ This framework helps public sector teams:
 - Move discussions away from “where are the outcomes” toward  
   “are the enablers and system conditions in place”  
 
-It is especially useful for:
+It is particularly useful for:
 
 - CDO and data leadership teams  
 - Portfolio, PMO and governance forums  
@@ -227,9 +225,9 @@ If you reuse it, you do not need to credit the source, but a short note back is 
 
 ## 12. Author  
 
-ValuLine model is created by **Bandhu P. Das**, public sector data leader, qualified accountant, Imperial AI policy fellow 2025 and former DAMA UK committee member (2023 to 2024).
+The ValueLine model is created by **Bandhu P. Das**, public sector data leader, qualified accountant, Imperial AI policy fellow 2025 and former DAMA UK committee member (2023 to 2024).
 
 🎤 **DAMA UK Talk – “Unlocking the Value of Data: Lessons from Public Sector Data Business Cases”**  
 https://www.brighttalk.com/webcast/12405/602410
 
-In this session, Bandhu explains why demonstrating the value of data work is challenging in federated public sector organisations. He introduces a practical extension of the Treasury Five Case Model that brings engagement and change into the core of impact. Drawing on 15 years across finance, policy and data, his approach focuses on making data strategy, maturity and public value visible, explainable and fundable in complex organisations
+In this session, Bandhu explains why demonstrating the value of data work is challenging in federated public sector organisations. He introduces a practical extension of the Treasury Five Case Model that brings engagement and change into the core of impact. Drawing on 15 years across finance, policy and data, his approach focuses on making data strategy, maturity and public value visible, explainable and fundable in complex organisations.
