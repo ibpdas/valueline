@@ -227,7 +227,6 @@ If you reuse it, you do not need to credit the source, but a short note back is 
 
 The ValueLine model is created by **Bandhu P. Das**, public sector data leader, qualified accountant, Imperial AI policy fellow 2025 and former DAMA UK committee member (2023 to 2024).
 
-🎤 **DAMA UK Talk – “Unlocking the Value of Data: Lessons from Public Sector Data Business Cases”**  
+**DAMA UK Talk – “Unlocking the Value of Data: Lessons from Public Sector Data Business Cases”**  
 https://www.brighttalk.com/webcast/12405/602410
 
-In this session, Bandhu explains why demonstrating the value of data work is challenging in federated public sector organisations. He introduces a practical extension of the Treasury Five Case Model that brings engagement and change into the core of impact. Drawing on 15 years across finance, policy and data, his approach focuses on making data strategy, maturity and public value visible, explainable and fundable in complex organisations.
