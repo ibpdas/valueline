@@ -62,9 +62,9 @@ Examples vary by organisation and context, but typically involve shifting from:
 
 ### 2. Level 2. System wide data maturity
 
-Level 2 describes how the organisation behaves when Level 1 foundations begin to take effect. It uses the six themes from the Data Maturity Assessment for Government (2023).
+Level 2 describes how the organisation behaves when Level 1 foundations begin to take effect. 
 
-How Level 2 themes shifts as Level 1 begins to work
+It uses the six themes from the Data Maturity Assessment for Government (2023).
 
 - **Uses**  
   From data used mainly for reactive reporting  to data used proactively to inform operational and strategic decisions.
