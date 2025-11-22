@@ -63,8 +63,7 @@ Examples vary by organisation and context, but typically involve shifting from:
 
 ## 2. Level 2. System maturity
 
-Level 2 describes how the organisation behaves when Level 1 foundations begin to take effect.  
-It uses the six themes from the Data Maturity Assessment for Government (2023).
+Level 2 describes how the organisation behaves when Level 1 foundations begin to take effect. It uses the six themes from the Data Maturity Assessment for Government (2023).
 
 ### Themes
 - Uses  
@@ -77,28 +76,22 @@ It uses the six themes from the Data Maturity Assessment for Government (2023).
 ### How Level 2 shifts as Level 1 begins to work
 
 - **Uses**  
-  From data used mainly for reactive reporting  
-  to data used proactively to inform operational and strategic decisions.
+  From data used mainly for reactive reporting  to data used proactively to inform operational and strategic decisions.
 
 - **Data**  
-  From siloed, inconsistent and hard to combine datasets  
-  to coherent, reusable and well governed data assets with interoperability.
+  From siloed, inconsistent and hard to combine datasets  to coherent, reusable and well governed data assets with interoperability.
 
 - **Leadership**  
-  From leaders viewing data issues as technical or administrative  
-  to leaders actively championing data, setting expectations and investing in capability.
+  From leaders viewing data issues as technical or administrative to leaders actively championing data, setting expectations and investing in capability.
 
 - **Culture**  
-  From low confidence and sporadic use of data  
-  to a culture where data is part of everyday decision making and shared responsibility.
+  From low confidence and sporadic use of data to a culture where data is part of everyday decision making and shared responsibility.
 
 - **Tools**  
-  From fragmented tools and workaround-heavy environments  
-  to integrated, discoverable and fit-for-purpose tools that support self service and reuse.
+  From fragmented tools and workaround heavy environments to integrated, discoverable and fit-for-purpose tools that support self service and reuse.
 
 - **Skills**  
-  From pockets of expertise concentrated in specialist teams  
-  to widespread data literacy and continuous capability development across roles.
+  From pockets of expertise concentrated in specialist teams to widespread data literacy and continuous capability development across roles.
 
 These shifts describe the system response that emerges when Level 1 enablers begin to operate effectively.
 
