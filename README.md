@@ -25,8 +25,7 @@
 
 Most public sector organisations find it difficult to show how data strategy activity leads to maturity and then to outcomes.  
 
-The problem is attribution.  
-Data teams usually control the inputs, but not the outcomes.
+The problem is attribution. Data teams usually control the inputs, but not the outcomes.
 
 This model brings clarity by structuring the story into three causal levels:
 
@@ -136,8 +135,7 @@ These give a balanced picture of both **capability building** and **value creati
 
 ## 6. Why this three level model works  
 
-Behind the dashboard is a simple systems principle:  
-foundations shape maturity, and maturity shapes outcomes.
+Behind the dashboard is a simple systems principle: **foundations shape maturity, and maturity shapes outcomes**.
 
 This approach works because:
 
