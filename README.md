@@ -46,10 +46,16 @@ This model brings clarity by structuring the story into three causal levels:
 This creates a clean chain of reasoning:  
 **Level 1 activities shape Level 2 maturity, which influences Level 3 outcomes.**
 
-> **Caveat – what this dashboard does and does not do**
+> **Caveat – scope and boundaries**
 >
-> This dashboard focuses on measuring direct outcomes and impact from data strategy work, for example changes in behaviour, efficiency and service performance. It is not a full data valuation framework. Other mechanisms are needed to assess data commercialisation opportunities and to evaluate wider social, environmental, economic and public trust benefits from data. The dashboard should therefore be read alongside broader value, risk and benefits approaches used in your organisation.
----
+> This dashboard focuses on the **direct organisational outcomes and impact** of data strategy work (e.g., behaviour change, efficiency, reuse, service performance).  
+> It is **not** a data valuation framework and does not cover commercial valuation or wider social, environmental or economic benefits.
+>
+> **Regulatory obligations vs strategic value:**  
+> Many teams already manage data well for compliance, security, audit and legal requirements — but **compliance is not the same as value**.  
+> Regulation keeps data safe; strategy makes data useful.
+>
+> This dashboard therefore complements, rather than replaces, existing governance, protection and assurance processes.
 
 ## 2. The three levels at a glance
 
