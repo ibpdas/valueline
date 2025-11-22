@@ -50,7 +50,7 @@ This creates a clean chain of reasoning:
 
 ## 2. The three levels at a glance
 
-### Level 1. Build the foundational enablers  
+### Level 1. Enabler shift 
 Early conditions shaped by data leaders and teams.  
 Examples vary by organisation and context, but typically involve shifting from:
 
@@ -60,7 +60,7 @@ Examples vary by organisation and context, but typically involve shifting from:
 - **Communities** – pockets of innovation → shared practice and reusable capabilties 
 - **Engagement** – ad-hoc conversations → ongoing dialogue across functions and organisations  
 
-### Level 2. System wide data maturity
+### Level 2. Maturity shift
 
 Level 2 describes how the organisation behaves when Level 1 foundations begin to take effect. 
 
@@ -78,7 +78,7 @@ It uses the six themes from the Data Maturity Assessment for Government (2023).
 
 - **Skills** - From pockets of expertise concentrated in specialist teams to widespread data literacy and continuous capability development across roles.
 
-### Level 3. Outcome shifts
+### Level 3. Outcome shift
 
 As Level 1 foundations strengthen and Level 2 behaviours mature, the pattern of public value shifts in predictable ways.
 
