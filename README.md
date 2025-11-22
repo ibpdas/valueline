@@ -49,12 +49,11 @@ This creates a clean chain of reasoning:
 > **Caveat – scope and boundaries**
 >
 > This dashboard focuses on the direct outcomes and impact of organisational data strategy work.  
-> It is not a data valuation framework and does not cover commercial valuation or wider social, environmental or economic benefits.
-> It is also not useful for national, sector wide data strategies, where dynamics, incentives and value mechanisms are very different.
+> It is not a data valuation framework and has limited wider social, environmental or economic benefits. It is also not useful for national, sector wide data strategies, where dynamics, incentives and value mechanisms are very different.
 
 > **Regulatory obligations vs strategic value:**  
 > Many teams already manage data well for compliance, audit and legal requirements — but **compliance is not the same as value**.  
-> Regulation keeps data safe; strategy makes data useful.
+> Regulation keeps data safe; strategy makes data valuable.
 
 
 ## 2. The three levels at a glance
