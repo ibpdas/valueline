@@ -78,14 +78,21 @@ It uses the six themes from the Data Maturity Assessment for Government (2023).
 
 - **Skills** - From pockets of expertise concentrated in specialist teams to widespread data literacy and continuous capability development across roles.
 
-### Level 3. Influence outcomes  
-Public value indicators influenced by Levels 1 and 2:
+### Level 3. Outcome shifts
 
-- Financial savings  
-- User satisfaction  
-- Efficiency gains  
-- Time savings  
-- Public good impact
+As Level 1 foundations strengthen and Level 2 behaviours mature, the pattern of public value shifts in predictable ways.
+
+- **Financial savings** - From isolated savings in specific teams to sustained, organisation wide savings supported by reliable evidence.
+
+- **User satisfaction** - From anecdotal or inconsistent feedback to measurable and repeatable improvements in user experience.
+
+- **Efficiency gains** - From small local efficiency wins to significant, system level efficiency improvements in core processes.
+
+- **Time savings** - From individual tasks being reduced or automated to end-to-end time reductions across services and workflows.
+
+- **Public good impact** - From occasional high impact cases to continuous and measurable contributions to policy, service delivery and citizen outcomes.
+
+These shifts describe how value grows as the organisation becomes more mature and aligned.
 
 ---
 
