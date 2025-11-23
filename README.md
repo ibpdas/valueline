@@ -195,12 +195,12 @@ Useful for:
 
 ## 8. What this repository provides
 
-- HTML conceptual dashboard (Dashboard + Methodology pages)  
+- HTML conceptual dashboard
+- Methodology, metrics catalogue, Theory of Chnage
 - Excel input template  
 - PowerPoint generator script  
-- Light architecture notes  
-- Synthetic example datasets  
-- Optional Streamlit app  
+- Architecture notes  
+- Synthetic example datasets    
 
 ---
 
