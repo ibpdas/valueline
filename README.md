@@ -24,11 +24,12 @@ A three level causal model to help public sector data leaders explain, track and
 
 ## 1. What the model solves
 
-Most public sector organisations struggle to show how data-strategy activity leads to maturity and, ultimately, to outcomes.  
+Most public sector organisations struggle to show how data strategy activity leads to maturity and, ultimately, to outcomes.  
 
 > The core challenge is attribution: data teams influence the inputs but not the outcomes or the speed at which they emerge.
 
 **ValueLine** structures the story into three causal levels.  
+
 Each works on a different time horizon and with different degrees of control, helping leaders understand:
 
 - where value can be realised quickly  
