@@ -240,15 +240,15 @@ Attribution is optional but appreciated.
 
 ## 12. Motivation for ValueLine
 
-ValueLine grew out of my experience leading data strategy work in complex, federated environments.  
+**ValueLine** grew out of my experience leading data strategy work in complex, federated environments.  
 
 Again and again I saw dedicated teams doing the right work, but struggling to show progress because the signals and measurements were unclear.
 
-Across many conversations with colleaguesand after reviewing more than 50 data strategies and business cases — the same pattern kept appearing:  
+Across many conversations with colleaguesand after reviewing more than 50 data strategies and business cases, the same pattern kept appearing:  
 
 > Strong foundational work was happening, but the story of progress was difficult to explain. Expectations drifted, value signals came too late and the connection between foundations, maturity and outcomes was often lost.
 
-I built ValueLine as a practical and repeatable way to make that connection clearer.  
+I built **ValueLine** as a practical and repeatable way to make that connection clearer.  
 
 It reflects years of trial, mistakes, small breakthroughs and generous advice from others along the way.
 
