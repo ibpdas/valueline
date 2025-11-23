@@ -117,23 +117,18 @@ Expectations are set realistically by classifying metrics as:
 
 - **Leading** – early signs that enablers are working (Level 1)  
 - **Signal** – system response and behaviour change (Level 2)  
-- **Lagging** – measurable public value (Level 3)  
+- **Lagging** – measurable outcomes and public value (Level 3)  
 
-This prevents unrealistic pressure to show outcomes before foundations are in place.
+This explains why different results move at different speeds.
 
-> **Important:** Different outcomes move at different speeds.  
->  
-> **Financial savings** — such as removing duplicate systems, rationalising platforms or tightening licensing, can accelerate quickly *once Level 1 strategic alignment and leadership decisions are in place*.  
->  
-> **Efficiency gains** — for example reducing rework from improving data quality, move at a *medium pace* as teams adapt processes and adopt shared practices.  
->  
-> **Time savings** emerge gradually as reusable datasets, automation and consistent tooling mature over time.  
->  
-> **User satisfaction** moves more slowly because it reflects behaviour, trust and consistent adoption across many teams.  
->  
-> **Public good outcomes** take longest to materialise because they require whole system alignment, cross team maturity and sustained use of evidence.  
->  
-> The ValueLine model makes these pacing differences explicit so expectations stay realistic.
+> **Important: different results move at different speeds**
+>
+> - **Financial savings** from removing duplicate systems, rationalising platforms or tightening licensing, procurement can move quickly once Level 1 strategic alignment and leadership decisions are in place.  
+> - **Efficiency gains and time savings** typically move at a medium pace as teams improve data quality, adopt shared tools and reuse common assets.  
+> - **User satisfaction** tends to move more slowly because it depends on behaviour, trust and consistent adoption across many teams.  
+> - **Public good impact** takes longest to show because it relies on whole system alignment and sustained use of evidence over time.  
+>
+> The **ValueLine** model makes these pacing differences explicit so expectations stay realistic.
 
 ---
 
