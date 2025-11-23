@@ -246,7 +246,7 @@ Again and again I saw data teams doing the right work, but struggling to show pr
 
 Across many conversations with colleagues and after reviewing more than 50 data strategies and business cases, the same pattern kept appearing:  
 
-> We had strong activity, but no simple way to connect foundations, maturity, and outcomesin a way that leaders could use.
+> People were working hard, fixing the right problems and improving foundations, but the story of progress was hard to tell.  Measurements varied, expectations drifted, and value signals came too late
 
 I built **ValueLine** as a practical, repeatable tool to make that connection clearer.  
 
