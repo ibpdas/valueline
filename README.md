@@ -8,7 +8,7 @@
 
 <p align="center">
   A three level causal model to help public sector data leaders explain, track and demonstrate 
-  data strategy impact in complex or federated organisations.
+  data strategy impact in complex or federated organisations with many partners with overlapping priorities and uneven maturity..
 </p>
 
 ---
