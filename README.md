@@ -39,9 +39,9 @@ Data teams often deliver essential foundational work, but leaders struggle to se
 
 It grew out of years of seeing talented teams do the right things but struggle to tell a clear value story.  
 
-ValueLine exists to give them a practical way to explain progress, set realistic expectations and focus attention on what truly drives public value.
+**ValueLine** exists to give them a practical way to explain progress, set realistic expectations and focus attention on what truly drives public value.
 
-It shifts conversations from _“Why is value slow?”_ to _“Which conditions and levers deliver value now, next and later?”_
+It shifts conversations from _“Why is value slow?”_ to _“Which conditions and decisions will deliver value now, next and later?”_
 
 ---
 
@@ -126,7 +126,7 @@ This explains why different results move at different speeds.
 > - **User satisfaction** tends to move more slowly because it depends on behaviour, trust and consistent adoption across many teams.  
 > - **Public good impact** takes longest to show because it relies on whole-system alignment and sustained use of evidence over time.  
 >
-> The **ValueLine** model makes these pacing differences explicit so expectations stay realistic.
+> **ValueLine** model makes these pacing differences explicit so expectations stay realistic.
 
 ---
 
@@ -188,6 +188,7 @@ This works because:
 - outcomes cannot exceed maturity  
 - value emerges from alignment, not isolated effort  
 - progress is iterative, not linear  
+- no magic metric and mixed method evaluation for rounded storytelling 
 
 These principles justify the structure of the dashboard and the use of leading, signal and lagging indicators.
 
