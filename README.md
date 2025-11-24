@@ -34,6 +34,7 @@
 ## 📌 Concept in 30 seconds
 
 Data teams often deliver essential foundational work, but leaders struggle to see how that effort translates into maturity or measurable outcomes.  
+
 **ValueLine** makes that connection visible by mapping foundations → maturity → impact in a single, repeatable model.
 
 It grew out of years of seeing talented teams do the right things but struggle to tell a clear value story.  
