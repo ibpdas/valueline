@@ -50,15 +50,13 @@ It shifts conversations from **"Why is value slow?”** to **“What must change
 
 ## 1. What the model solves
 
-Public sector organisations often operate in federated, siloed or multi team environments.  
-
-In this environment, it becomes unclear how foundational data work leads to maturity or measurable outcomes.
+Public sector organisations often operate in complex, federated or multi team environments where no single entity controls the full data value chain. As a result, leaders struggle to see how foundational work translates into maturity, behaviour change or public value.
 
 The underlying issue is **attribution**.  
 
 > Data teams create the *conditions* for value, but the outcomes depend on adoption, behaviour change, operational cycles and external policy or service pressures. As a result, progress is real but hard to demonstrate.
 
-**ValueLine** solves this by separating the journey into three causal levels:
+**ValueLine** solves this by breaking the journey into three causal levels. Each moves at a different pace and is influenced by different actors.
 
 - **Level 1 — conditions data teams co-design and shape**  
   (strategy alignment, leadership, standards, tooling, communities)
@@ -71,12 +69,10 @@ The underlying issue is **attribution**.
 
 This structure gives leaders a more honest and realistic view of progress by clarifying:
 
-- where value can be realised quickly  
-- where progress genuinely takes longer  
-- which decisions and conditions accelerate or block impact  
-
-This three level causal model makes progress visible, expectations realistic and strategic choices clearer.
-
+- what will unlock value now, next and later
+- where meaningful progress is happening even when outcomes lag
+- which constraints, decisions and dependencies matter most
+- why strengthening foundational enablers is essential for sustainable impa
 
 ### Caveat – scope and boundaries
 
