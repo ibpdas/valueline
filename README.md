@@ -7,7 +7,7 @@
 <h1 align="center">ValueLine: A Clearer Line of Sight from Data to Impact</h1>
 
 <p align="center">
-  A three-level causal model to help public sector data leaders explain, track and demonstrate 
+  A three level causal model to help public sector data leaders explain, track and demonstrate 
   data strategy impact in complex or federated organisations.
 </p>
 
@@ -100,8 +100,8 @@ As Level 1 and Level 2 strengthen, public value shifts in predictable ways:
 
 - **Financial savings** – isolated wins → sustained, organisation-wide efficiencies  
 - **User satisfaction** – anecdotal → measurable, repeatable improvements  
-- **Efficiency gains** – local wins → system-wide improvements in core processes  
-- **Time savings** – task-based → end-to-end workflow reductions  
+- **Efficiency gains** – local wins → system wide improvements in core processes  
+- **Time savings** – task based → end to end workflow optimisation  
 - **Public good impact** – occasional → continuous contributions to policy and service outcomes  
 
 ---
@@ -134,10 +134,10 @@ The dashboard includes an **Executive decision box** to the right of Page 1.
 It gives leaders a focused view of:
 
 - top three asks  
-- key trade-offs  
+- key trade offs  
 - critical dependencies  
 - confidence levels in the evidence  
-- forward-look priorities  
+- forward look priorities  
 
 This turns data strategy into **specific executive actions**, not just a performance commentary.
 
@@ -145,10 +145,10 @@ This turns data strategy into **specific executive actions**, not just a perform
 
 ## 5. Measurement methods
 
-ValueLine uses a mixed-method approach to understand capability building and value creation.  
+**ValueLine** uses a **mixed method** approach to understand capability building and value creation.  
 The labels (Leading, Signal, Lagging) show which part of the causal chain each method mainly informs.
 
-### Quantitative indicators
+### Quantitative
 - monthly performance reports (Lagging)
 - quarterly senior leadership updates (Signal)
 - validated cost and time savings (Lagging)
@@ -157,7 +157,7 @@ The labels (Leading, Signal, Lagging) show which part of the causal chain each m
 - API and open data analytics (Signal)
 - CO2 impacts from compute and storage (Lagging)
 
-### Qualitative signals
+### Qualitative 
 - staff surveys (Signal)
 - training and community participation (Leading)
 - user research and engagement logs (Signal)
@@ -175,7 +175,7 @@ Together these create a rounded view of capability building and value creation.
 ## 6. Why this model works
 
 **ValueLine** is grounded in a simple systems principle:  
-**foundations shape maturity, and maturity shapes outcomes and impact.**
+> foundations shape maturity, and maturity shapes outcomes and impact.
 
 This works because:
 
@@ -194,10 +194,10 @@ These principles justify the structure of the dashboard and the use of leading, 
 
 **ValueLine** helps data teams:
 
-- explain data strategy impact using a simple causal chain  
-- engage senior leaders with a repeatable, visually clear dashboard  
+- explain data strategy impact in a holistic way 
+- engage senior leaders with more confidence  
 - identify where to invest next in **Level 1** (conditions) or **Level 2** (maturity)  
-- compare directorates or ALBs within federated departments without turning it into a league table  
+- align directorates or ALBs within federated departments without turning it into a league table  
 
 It is particularly useful for:
 
@@ -258,9 +258,7 @@ Attribution is optional but appreciated.
 
 **ValueLine** grew out of years of leading data strategy work in complex, federated environments.
 
-Again and again I saw dedicated teams doing the right work, but struggling to show progress because the signals and measurements were unclear.
-
-Across many conversations with colleagues, and after reviewing more than fifty data strategies and business cases, the same pattern kept appearing:
+Again and again I saw dedicated teams doing the right work, but struggling to show progress because the signals and measurements were unclear. Across many conversations with colleagues, and after reviewing more than fifty data strategies and business cases, the same pattern kept appearing:
 
 > Strong foundational work was happening, but the story of progress was difficult to explain.  
 > Expectations drifted, value signals came too late, and the connection between foundations, maturity and outcomes was often lost.
