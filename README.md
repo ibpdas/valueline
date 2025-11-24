@@ -35,13 +35,13 @@
 
 Public sector leaders care about outcomes, but the path from data work to real impact is often unclear.
 
-**ValueLine** makes that line of sight visible by showing how foundational fixes → strengthen system maturity → unlock organisational value.
+**ValueLine** makes that line of sight visible by showing how foundational fixes strengthen system maturity and ultimately create organisational value.
 
 It was developed after years of seeing teams diver essential data work yet struggle to explain how and when that work would translate into real results.
 
 **ValueLine helps leaders:**
 - identify the conditions and decisions that truly drive value  
-- securd buy-in and support with a clear, plain English line of sight from foundations → maturity → impact 
+- secure buy-in and support with a clear, plain English line of sight from foundations → maturity → impact 
 - surface the constraints, dependencies and trade offs that shape the path to value  
 
 It shifts conversations from **"Why is value slow?”** to **“What must change now, next and later to unlock value?”**
@@ -56,7 +56,7 @@ The underlying issue is **attribution**.
 
 > Data teams create the *conditions* for value, but the outcomes depend on adoption, behaviour change, operational cycles and external policy or service pressures. As a result, progress is real but hard to demonstrate.
 
-**ValueLine** solves this by breaking the journey into three causal levels. Each moves at a different pace and is influenced by different actors.
+**ValueLine** solves this by breaking the journey into three causal levels. Each moves at a different pace and is influenced by different decisions and actors.
 
 - **Level 1 — conditions data teams co-design and shape**  
   (strategy alignment, leadership, standards, tooling, communities)
