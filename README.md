@@ -50,11 +50,9 @@ It shifts conversations from **"Why is value slow?”** to **“What must change
 
 ## 1. What the model solves
 
-# What the Model Solves
+Most public sector organisations work in complex, federated environments. No single team controls the full data value chain, which makes it difficult to show how foundational work leads to maturity, behaviour change or public value.
 
-Public sector organisations work in complex, federated environments. No single team controls the full data value chain, which makes it difficult to show how foundational work leads to maturity, behaviour change or public value.
-
-## Core Challenges
+Core challenges are:
 
 - unclear attribution  
 - competing priorities  
@@ -62,11 +60,9 @@ Public sector organisations work in complex, federated environments. No single t
 
 Data teams create the conditions for value, but results depend on how the wider system adopts and uses those conditions.
 
-This creates a familiar tension:
+This creates a familiar tension - quick wins now vs strong foundations for later.
 
-**quick wins now** vs **strong foundations for later**
-
-## Why It Matters
+### Why It Matters
 
 When value flows are not understood, organisations:
 
