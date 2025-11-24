@@ -7,8 +7,7 @@
 <h1 align="center">ValueLine: A Clearer Line of Sight from Data to Impact</h1>
 
 <p align="center">
-  A three level causal model to help public sector data leaders explain, track and demonstrate 
-  data strategy impact in complex or federated organisations.
+A simple, practical way to show how foundational data work translates into maturity, behaviour change and real organisational value.
 </p>
 
 ---
