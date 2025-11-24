@@ -33,16 +33,19 @@
 
 ## 📌 Concept in 30 seconds
 
-Public sector leaders care about outcomes, but the path from data work to real impact is often unclear.
+Public sector leaders care about outcomes, but the path from data work to real impact is often unclear. 
 
-**ValueLine** makes that line of sight visible by showing how foundational fixes strengthen system maturity and ultimately create organisational value.
+Foundational data improvements are essential, yet their contribution to maturity and public value is difficult to explain.
 
-It was developed after years of seeing teams deliver essential data work yet struggle to explain how and when that work would translate into real results.
+**ValueLine** makes that line of sight visible. It shows how strengthening foundations leads to better behaviours, stronger systems and ultimately real organisational value.
+
+The model grew out of years of seeing teams deliver important data work but struggle to articulate how and when that work would translate into results that matter.
 
 **ValueLine helps leaders:**
 - identify the actions, conditions and decisions that truly drive value  
 - secure buy-in with a clear, plain English line of sight from foundations → maturity → impact 
 - surface the constraints, dependencies and trade offs that shape the path to value  
+- balance quick wins with the deeper changes needed for sustainable value
 
 It shifts conversations from **"Why is value slow?”** to **“What must change now, next and later to unlock value?”**
 
