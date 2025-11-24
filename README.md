@@ -50,15 +50,33 @@ It shifts conversations from **"Why is value slow?”** to **“What must change
 
 ## 1. What the model solves
 
-Public sector organisations often operate in complex, federated environments where no single entity controls the full data value chain. This makes it hard to show how foundational work translates into maturity, behaviour change or public value.
+# What the Model Solves
 
-The underlying issue are attribution, prioritisation and collaboration.
+Public sector organisations work in complex, federated environments. No single team controls the full data value chain, which makes it difficult to show how foundational work leads to maturity, behaviour change or public value.
 
-Data teams create the conditions for value, but outcomes depend on whether the wider system adopts and uses them. 
+## Core Challenges
 
-When the link is unclear, leaders face an additional challenge - balancing the pressure for visible quick wins with the need to fix long term foundations for sustainable impact.
+- unclear attribution  
+- competing priorities  
+- fragmented collaboration  
 
-Without clarity on how value flows, organisations unintentionally waste effort, duplicate work and miss opportunities for collaboration and real impact.
+Data teams create the conditions for value, but results depend on how the wider system adopts and uses those conditions.
+
+This creates a familiar tension:
+
+**quick wins now** vs **strong foundations for later**
+
+## Why It Matters
+
+When value flows are not understood, organisations:
+
+- waste effort  
+- duplicate work  
+- misread progress  
+- lose opportunities for collaboration  
+- miss chances for real impact  
+
+A clearer view of the value journey helps leaders prioritise well, direct investment, and reduce wasted energy across the system.
 
 **ValueLine** solves these by breaking the journey into three causal levels. Each moves at a different pace and is influenced by different actors.
 
