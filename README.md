@@ -36,7 +36,7 @@ Foundational activities are essential, yet their contribution to maturity and ou
 
 That leads to misaligned expectations, duplicated effort, slower impact and results that are harder to sustain.
 
-> ValueLine brings together a causal model, a delivery focussed dashboard and a lightweight methodology to show where value is emerging, how maturity is shifting and where leadership action is needed.  
+> ValueLine brings together a causal model, a delivery focussed dashboard and a lightweight methodology to show where value is emerging, how maturity is shifting and where leadership action is needed to accelerate the path to impact.
 
 It turns data strategy into something *live and usable* — surfacing early signals of change and creating a shared picture of progress across a federated organisation, reducing narrative drift and making alignment easier to sustain.
 
