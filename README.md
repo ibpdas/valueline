@@ -33,11 +33,11 @@ A simple, practical model for showing how foundational data work turns into matu
 
 Public sector leaders care deeply about outcomes, but the link between data work and real impact is often unclear.
 
-Foundations matter, yet their contribution to maturity, behaviour change and public value is hard to see.  
+Foundational activities are essential, yet their contribution to maturity, behaviour change and public value is hard to see.  
 This creates unclear expectations, late value signals and inconsistent support.
 
 **ValueLine** gives a clear, plain-English line of sight from foundations → maturity → outcomes.  
-It shows **what’s changing**, **why different results move at different speeds**, and **what leaders need to focus on now, next and later**.
+It shows what’s changing, why different results move at different speeds, and what leaders need to focus on now, next and later.
 
 It grew out of seeing strong foundational work being delivered, but the story of progress remaining hard to explain.
 
@@ -49,15 +49,16 @@ In federated organisations, no single team controls the data value chain.
 This creates three persistent challenges:
 
 - **Unclear attribution** between foundational work and outcomes  
-- **Competing priorities** that dilute focus  
-- **Fragmented collaboration** across directorates  
+- **Competing priorities** that dilute focus
+- **Fragmented collaboration** across teams and functions
 
 When the line of sight is weak, organisations:
 
-- focus effort in the wrong places  
-- misread progress  
-- invest without addressing root causes  
-- experience delayed or diluted impact  
+- Focus effort in the wrong places  
+- Misread progress  
+- Imvest without addressing root causes  
+- Experience delayed or diluted impact  
+- Create quick fixes that become future bottlenecks 
 
 ### How ValueLine addresses this
 
@@ -114,7 +115,7 @@ These explain why Level 3 cannot appear before Level 1 and Level 2 shifts.
 
 ### 2.3 The three measurement methods — how evidence builds
 
-ValueLine uses a mixed-evidence approach:
+ValueLine uses a mixed evidence approach:
 
 - **Quantitative** — savings, adoption, reuse, usage  
 - **Qualitative** — sentiment, user research, case studies  
@@ -161,7 +162,7 @@ ValueLine works because it:
 
 Most importantly, it keeps strategy **alive**.
 
-By connecting strategy to governance, culture and real-time signals of change, ValueLine prevents strategy becoming shelfware.  
+By connecting strategy to real time signals of change, ValueLine prevents strategy becoming shelfware.  
 It becomes a living tool for action, alignment and collaboration.
 
 ---
@@ -169,13 +170,13 @@ It becomes a living tool for action, alignment and collaboration.
 ## 4.1 What this model requires from leaders
 
 ValueLine only works when leaders act on what it surfaces.  
-This means:
+This can mean:
 
-- **Clear ownership** of data domains and standards  
-- **Prioritising shared foundations** over local optimisation  
-- **Fast resolution of cross-team dependencies**  
-- **Aligned budgets and resources** for Level 1 and Level 2 work  
-- **Consistent reinforcement** of reuse, interoperability and evidence-led decisions  
+- Clear ownership of data domains and standards  
+- Prioritising shared foundations over local optimisation  
+- Fast resolution of cross team dependencies
+- Aligned budgets and resources for Level 1 and Level 2 work  
+- Consistent reinforcement of reuse, interoperability and evidence led decisions  
 
 Without these leadership actions, foundations stall and outcomes lag — regardless of technical effort.
 
@@ -185,28 +186,28 @@ Without these leadership actions, foundations stall and outcomes lag — regardl
 
 ValueLine helps teams:
 
-- explain data strategy impact clearly and credibly  
-- engage leaders with realistic pacing and evidence  
-- decide whether to prioritise foundations or maturity  
-- align directorates and ALBs without league tables  
+- Explain data strategy impact clearly and credibly  
+- Engage leaders with realistic pacing and evidence  
+- Decide whether to prioritise foundations or maturity  
+- Align directorates and ALBs without league tables  
 
 Useful for:
 
 - CDO and data leadership teams  
 - PMO, governance and portfolio groups  
-- strategy, policy and finance partners  
-- performance, evaluation and benefits teams  
+- Strategy, policy and finance partners  
+- Change and benefit managment teams  
 
 ---
 
 ## 6. What this repository includes
 
 - HTML conceptual dashboard  
-- methodology notes, metric catalogue and theory of change  
+- Methodology notes, metric catalogue  
 - Excel input template  
 - PowerPoint generator  
-- light-touch architecture notes  
-- synthetic example datasets  
+- Lighttouch architecture notes  
+- Synthetic example datasets  
 
 ---
 
@@ -222,12 +223,12 @@ Useful for:
 
 ## 8. Limitations
 
-- synthetic data only  
-- not a scorecard or benchmark  
-- attribution remains approximate  
-- evidence quality improves over time  
-- outcomes lag, sometimes by years  
-- maturity scores are directional  
+- Synthetic data only  
+- Not a scorecard or benchmark  
+- Attribution remains approximate  
+- Evidence quality improves over time  
+- Outcomes lag, sometimes by years  
+- Maturiry scores are directional  
 
 Use alongside your own evidence, governance and judgement.
 
@@ -249,11 +250,11 @@ Attribution is optional but appreciated.
 
 Across federated teams and dozens of data strategies, I kept seeing the same pattern:
 
-- strong foundational work  
-- unclear value story  
-- drifting expectations  
-- late value signals  
-- weak connection between foundations, maturity and outcomes  
+- Strong foundational work  
+- Unclead value story  
+- Drifting expectations  
+- Late value signals  
+- Weak connection between foundations, maturity and outcomes  
 
 ValueLine is my way of making that connection clearer and more usable.
 
