@@ -109,7 +109,7 @@ Reuse, interoperability, confidence, evidence-informed decisions, stronger colla
 **Level 3 — Outcomes**  
 Savings, time reduction, efficiency, improved services, public good impact.
 
-> A clean chain: foundations → maturity → outcomes → impact.
+> A clean chain: foundations → maturity → outcomes & impact.
 
 ---
 
@@ -125,7 +125,7 @@ Savings, time reduction, efficiency, improved services, public good impact.
 
 ### 2.3 The three measurement methods — how evidence builds
 
-ValueLine uses a mixed-evidence approach:
+ValueLine uses a mixed evidence approach:
 
 - **Quantitative** — savings, adoption, reuse, usage  
 - **Qualitative** — sentiment, user research, case studies  
@@ -163,14 +163,13 @@ It also **makes early change visible** — often the key trigger for building co
 
 ### **3.2 What ValueLine needs from leaders**
 
-ValueLine only works when leaders act on what it surfaces.  
-This typically requires:
+ValueLine only works when leaders act on what it surfaces. This typically requires:
 
 - clear ownership of data domains and standards  
 - balancing trade off between shared foundations and local optimisation  
 - timely resolution of cross-team dependencies  
-- aligned resources for Level 1 and Level 2 work  
-- consistent reinforcement of reuse, interoperability and evidence-led decisions  
+- align resources and be willing to retire duplicative tools and processes when common capabilities exist
+- consistent reinforcement of reuse, interoperability and data led decisions  
 
 Without these leadership behaviours, foundations stall and outcomes lag, regardless of technical effort.
 
