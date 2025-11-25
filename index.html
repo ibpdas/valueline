@@ -496,7 +496,80 @@
     color: #4b5563;
     margin-top: 2px;
   }
-  
+  /* --- Metrics Swimlane Grid --- */
+
+.toc-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr; /* left label + two metric columns */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.toc-metrics-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.toc-metrics-grid > div,
+.toc-metrics-header > div {
+  border: 1px solid #e0e0e0;
+  padding: 12px 14px;
+  background: #ffffff;
+}
+
+/* Foundation name styling to match main swimlane */
+.toc-foundation-name {
+  background: #f8fafc;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+/* Stage cells */
+.toc-stage {
+  background: #ffffff;
+  padding: 10px 14px;
+}
+
+.toc-stage-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Bullet list styling */
+.toc-stage-text ul {
+  margin: 6px 0 0 18px;
+  padding: 0;
+}
+
+.toc-stage-text ul li {
+  margin-bottom: 4px;
+  font-size: 0.88rem;
+}
+
+/* Header pill styling (shared with first swimlane) */
+.toc-lane-pill {
+  background: #e5f1fb;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+/* Optional: Align arrow row nicely */
+.toc-lane-arrow-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #777;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
 </style>
 </head>
 
@@ -1561,6 +1634,136 @@ Data value is hard to prove in federated environments. This dashboard offers a p
       <div class="toc-stage-text">
         <strong>More joined-up services and more confident evidence use across functions</strong><br>
         Cross-functional engagement builds shared understanding, smoother access to services and more consistent evidence use across teams that deliver public outcomes.
+      </div>
+    </div>
+
+  </div>
+  <!-- METRICS SWIMLANE -->
+
+  <!-- COLUMN HEADERS -->
+  <div class="toc-metrics-header toc-metrics-grid" style="margin-top:24px;">
+    <div></div>
+    <div class="toc-lane-header-stage">
+      <span class="toc-lane-pill">Outcome signals</span>
+      <span>How behaviour shows up</span>
+    </div>
+    <div class="toc-lane-header-stage">
+      <span class="toc-lane-pill">Impact signals</span>
+      <span>How value shows up</span>
+    </div>
+  </div>
+
+  <div class="toc-lane-arrow-row">
+    <div></div>
+    <div>Outcomes are measured by</div>
+    <div>Impacts are measured by</div>
+  </div>
+
+  <!-- GRID -->
+  <div class="toc-metrics-grid">
+
+    <!-- Strategy -->
+    <div class="toc-foundation-name">Strategy</div>
+    <div class="toc-stage toc-stage-outcome">
+      <div class="toc-stage-text">
+        <strong>Outcome signals</strong>
+        <ul>
+          <li>Reduction in duplicated funding bids</li>
+          <li>Higher share of projects assessed against shared criteria</li>
+        </ul>
+      </div>
+    </div>
+    <div class="toc-stage toc-stage-impact">
+      <div class="toc-stage-text">
+        <strong>Impact signals</strong>
+        <ul>
+          <li>£ avoided through reduced duplication</li>
+          <li>Improvements in key outcome or service indicators</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Leadership -->
+    <div class="toc-foundation-name">Leadership</div>
+    <div class="toc-stage toc-stage-outcome">
+      <div class="toc-stage-text">
+        <strong>Outcome signals</strong>
+        <ul>
+          <li>Reduction in escalation time for cross-team issues</li>
+          <li>Higher share of issues resolved at the right governance tier</li>
+        </ul>
+      </div>
+    </div>
+    <div class="toc-stage toc-stage-impact">
+      <div class="toc-stage-text">
+        <strong>Impact signals</strong>
+        <ul>
+          <li>Higher share of priority datasets and services with clear ownership</li>
+          <li>Time saved through clearer ownership and faster decisions</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Foundation -->
+    <div class="toc-foundation-name">Foundation</div>
+    <div class="toc-stage toc-stage-outcome">
+      <div class="toc-stage-text">
+        <strong>Outcome signals</strong>
+        <ul>
+          <li>Growth in reuse rate of shared datasets, pipelines or APIs</li>
+          <li>Reduction in manual data preparation time</li>
+        </ul>
+      </div>
+    </div>
+    <div class="toc-stage toc-stage-impact">
+      <div class="toc-stage-text">
+        <strong>Impact signals</strong>
+        <ul>
+          <li>Hours saved through reuse of shared platforms and data</li>
+          <li>£ saved from decommissioning duplicate tools and pipelines</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Community -->
+    <div class="toc-foundation-name">Community</div>
+    <div class="toc-stage toc-stage-outcome">
+      <div class="toc-stage-text">
+        <strong>Outcome signals</strong>
+        <ul>
+          <li>Number and reuse rate of community assets (patterns, notebooks, templates)</li>
+          <li>Number of active contributors across teams</li>
+        </ul>
+      </div>
+    </div>
+    <div class="toc-stage toc-stage-impact">
+      <div class="toc-stage-text">
+        <strong>Impact signals</strong>
+        <ul>
+          <li>Reduction in variance of analysis quality across teams</li>
+          <li>Reduction in duplicated analysis work or overlapping products</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Engagement -->
+    <div class="toc-foundation-name">Engagement</div>
+    <div class="toc-stage toc-stage-outcome">
+      <div class="toc-stage-text">
+        <strong>Outcome signals</strong>
+        <ul>
+          <li>Adoption rate of key shared services</li>
+          <li>Participation in cross-functional events, clinics and festivals</li>
+        </ul>
+      </div>
+    </div>
+    <div class="toc-stage toc-stage-impact">
+      <div class="toc-stage-text">
+        <strong>Impact signals</strong>
+        <ul>
+          <li>Time saved via smoother support and onboarding pathways</li>
+          <li>Number of services using shared data and platforms</li>
+        </ul>
       </div>
     </div>
 
