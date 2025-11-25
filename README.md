@@ -32,12 +32,13 @@ A simple, practical model for showing how foundational data work turns into matu
 
 Public sector leaders care deeply about outcomes, but the link between data work and real impact is often unclear.
 
-Foundational activities matter, yet their contribution to maturity and outcomes is hard to see.  
+Foundational activities are essential, yet their contribution to maturity and outcomes is hard to see.  
+
 That leads to unclear expectations, late value signals and uneven support.
 
-**ValueLine brings together a causal model, a simple dashboard and a lightweight methodology that show where value is emerging, where maturity is shifting and where leadership action is needed.**
+**ValueLine brings together a causal model, an action focussed dashboard and a lightweight methodology that show where value is emerging, where maturity is shifting and where leadership action is needed.**
 
-It provides a plain-English line of sight from **foundations → maturity → outcomes**, showing what’s changing, why results move at different speeds, and what to focus on now, next and later.
+It turns data strategy into something live and usable, showing where value is emerging and what leaders need to focus on now, next and later.
 
 ---
 
@@ -149,10 +150,10 @@ ValueLine uses a mixed-evidence approach:
 
 ### **3.1 What leaders get from ValueLine**
 
-The **Leadership Action Box** distils insights into what leaders need to steer the system:
+The **Executive Decision Box** distils insights into what leaders need to steer the system:
 
 - essential decisions  
-- trade-offs and dependencies  
+- trade offs and dependencies  
 - confidence levels  
 - now / next / later priorities  
 
@@ -166,12 +167,12 @@ ValueLine only works when leaders act on what it surfaces.
 This typically requires:
 
 - clear ownership of data domains and standards  
-- prioritising shared foundations over local optimisation  
+- balancing trade off between shared foundations and local optimisation  
 - timely resolution of cross-team dependencies  
 - aligned resources for Level 1 and Level 2 work  
 - consistent reinforcement of reuse, interoperability and evidence-led decisions  
 
-Without these leadership behaviours, foundations stall and outcomes lag — regardless of technical effort.
+Without these leadership behaviours, foundations stall and outcomes lag, regardless of technical effort.
 
 ---
 
