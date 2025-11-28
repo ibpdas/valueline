@@ -145,8 +145,45 @@ ValueLine uses a mixed evidence approach:
 > This turns ValueLine into a decision tool rather than a descriptive diagram.
 
 ---
+### 2.5 The three levels at a glance — the shifts that matter
 
-### 2.5 Bias prompts for interpretation
+ValueLine tracks **how the system shifts over time** as foundations strengthen and maturity increases.
+
+#### **Level 1 — Foundational enabler shifts**  
+Early conditions shaped by data leaders and partner teams. Typical shifts include:
+
+- **Strategy** — isolated priorities → shared direction and cross-cutting data priorities  
+- **Leadership** — “their data problem” → shared ownership and accountability  
+- **Foundation** — fragmented fixes → common policies, platforms and standards  
+- **Community** — pockets of innovation → shared practice and reusable capabilities  
+- **Engagement** — ad-hoc conversations → ongoing cross-functional, cross-organisational engagement  
+
+---
+
+#### **Level 2 — Maturity shifts**  
+How the organisation behaves when Level 1 foundations take effect (aligned to the *Data Maturity Assessment for Government, 2023*):
+
+- **Uses** — reactive reporting → proactive operational and strategic use  
+- **Data** — siloed/inconsistent → coherent, reusable, governed and interoperable  
+- **Leadership** — passive/detached → active sponsorship and expectation-setting  
+- **Culture** — sporadic/low-confidence → everyday data-informed decisions  
+- **Tools** — fragmented → integrated, discoverable and self-service  
+- **Skills** — pockets of expertise → widespread literacy and continuous development  
+
+---
+
+#### **Level 3 — Outcome and impact shifts**  
+As Level 1 and 2 strengthen, public value moves in predictable ways:
+
+- **Financial savings** — isolated wins → sustained, organisation-wide efficiencies  
+- **User satisfaction** — anecdotal → measurable, repeatable improvements  
+- **Efficiency gains** — local wins → system-wide improvements in core processes  
+- **Time savings** — task-based → end-to-end workflow optimisation  
+- **Public good impact** — occasional → continuous contributions to policy and service outcomes  
+
+---
+
+### 2.6 Bias prompts for interpretation
 
 The dashboard includes a small set of **bias prompt cards**. These are not a full catalogue of cognitive biases, but simple reminders used when:
 
