@@ -508,116 +508,194 @@
       margin-top: 2px;
     }
 
-    /* Bias reminders section */
-    #bias-reminders {
-      margin-top: 2rem;
-      padding: 1.5rem;
-      border-radius: 16px;
-      background: linear-gradient(to bottom right, #f9fafb, #edf2ff);
-      border: 1px solid #e5e7eb;
-    }
+/* Bias reminders section */
+#bias-reminders {
+  margin-top: 2rem;
+  padding: 1.5rem 1.6rem;
+  border-radius: 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
 
-    #bias-reminders .section-title {
-      font-size: 1.4rem;
-      font-weight: 650;
-      margin-bottom: 0.25rem;
-      color: #111827;
-    }
+/* Header text */
+#bias-reminders .section-title {
+  font-size: 1.25rem;
+  font-weight: 650;
+  margin: 0 0 0.3rem 0;
+  color: #111827;
+}
 
-    #bias-reminders .section-subtitle {
-      font-size: 0.9rem;
-      color: #4b5563;
-      margin-bottom: 1.25rem;
-    }
+#bias-reminders .section-subtitle {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin: 0 0 0.9rem 0;
+}
 
-    .bias-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-    }
+/* Intro explainer (similar to TOC intro box) */
+.bias-intro {
+  background: #f8f9fa;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  line-height: 1.55;
+  font-size: 0.85rem;
+  color: #374151;
+  margin-bottom: 1rem;
+}
 
-    .bias-card {
-      background-color: #ffffff;
-      border-radius: 14px;
-      padding: 14px 16px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
-      transition: box-shadow 150ms ease, transform 150ms ease, border-color 150ms ease, background-color 150ms ease;
-    }
+.bias-intro p {
+  margin: 0 0 4px 0;
+}
 
-    .bias-card:hover {
-      transform: translateY(-1px);
-      border-color: #cbd5f5;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-      background-color: #fdfefe;
-    }
+.bias-intro p:last-child {
+  margin-bottom: 0;
+}
 
-    .bias-card-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
+/* Grid layout for cards */
+.bias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.9rem;
+}
 
-    .bias-pill {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      background: #e0f0ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #1d70b8;
-    }
+/* Individual card base */
+.bias-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+  transition:
+    box-shadow 150ms ease,
+    transform 150ms ease,
+    border-color 150ms ease,
+    background-color 150ms ease;
+  border-top-width: 3px;
+}
 
-    .bias-card h3 {
-      font-size: 1rem;
-      margin: 0;
-      color: #111827;
-    }
+/* Hover state */
+.bias-card:hover {
+  transform: translateY(-1px);
+  border-color: #cbd5f5;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  background-color: #fdfefe;
+}
 
-    .bias-card h4 {
-      font-size: 0.8rem;
-      margin: 0.35rem 0 0.15rem 0;
-      color: #4b5563;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-    }
+/* Card header */
+.bias-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+}
 
-    .bias-card p {
-      font-size: 0.85rem;
-      margin: 0 0 0.15rem 0;
-      color: #111827;
-    }
+.bias-pill {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
 
-    @media (prefers-color-scheme: dark) {
-      #bias-reminders {
-        background: radial-gradient(circle at top left, #111827, #020617);
-        border-color: #1f2933;
-      }
+/* Title and labels */
+.bias-card h3 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #111827;
+}
 
-      .bias-card {
-        background-color: #020617;
-        border-color: #1f2937;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-      }
+.bias-card h4 {
+  font-size: 0.75rem;
+  margin: 0.4rem 0 0.1rem 0;
+  color: #4b5563;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
 
-      .bias-card:hover {
-        background-color: #020617;
-        border-color: #3b82f6;
-      }
+.bias-card p {
+  font-size: 0.82rem;
+  margin: 0 0 0.15rem 0;
+  color: #111827;
+}
 
-      #bias-reminders .section-title,
-      #bias-reminders .section-subtitle,
-      .bias-card h3,
-      .bias-card p,
-      .bias-card h4 {
-        color: #e5e7eb;
-      }
-    }
+/* Themed colours consistent with dashboard palette */
+.bias-theme-incentives {
+  border-top-color: #f97316; /* orange */
+}
+.bias-theme-incentives .bias-pill {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.bias-theme-measures {
+  border-top-color: #3b82f6; /* blue */
+}
+.bias-theme-measures .bias-pill {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.bias-theme-time {
+  border-top-color: #22c55e; /* green */
+}
+.bias-theme-time .bias-pill {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.bias-theme-perception {
+  border-top-color: #a855f7; /* violet */
+}
+.bias-theme-perception .bias-pill {
+  background: #efe9ff;
+  color: #6b21a8;
+}
+
+.bias-theme-complexity {
+  border-top-color: #0ea5e9; /* teal/blue */
+}
+.bias-theme-complexity .bias-pill {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+/* Dark mode sensitivity */
+@media (prefers-color-scheme: dark) {
+  #bias-reminders {
+    background: radial-gradient(circle at top left, #111827, #020617);
+    border-color: #1f2933;
+  }
+
+  .bias-intro {
+    background: #020617;
+    border-color: #1f2937;
+    color: #e5e7eb;
+  }
+
+  .bias-card {
+    background-color: #020617;
+    border-color: #1f2937;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  }
+
+  .bias-card:hover {
+    background-color: #020617;
+    border-color: #3b82f6;
+  }
+
+  #bias-reminders .section-title,
+  #bias-reminders .section-subtitle,
+  .bias-card h3,
+  .bias-card p,
+  .bias-card h4 {
+    color: #e5e7eb;
+  }
+}
+
   </style>
 </head>
 
@@ -1698,221 +1776,232 @@
     </div>
   </div>
 
-  <!-- BIAS REMINDERS -->
-  <section id="bias-reminders">
-    <h2 class="section-title">Bias reminders</h2>
-    <p class="section-subtitle">
-      Use these prompts when interpreting diagnostics and selecting ValueLine shifts.
+<section id="bias-reminders">
+  <h2 class="section-title">Bias reminders</h2>
+  <p class="section-subtitle">
+    Use these prompts when interpreting diagnostics and selecting ValueLine shifts.
+  </p>
+
+  <div class="bias-intro">
+    <p>
+      <strong>How to use this:</strong> scan the cards before you interpret a maturity score or choose a shift.
+      Ask, "If this bias were present, how would it distort what I am seeing or proposing?"
     </p>
+    <p>
+      The aim is not to remove bias completely, but to make it visible and discussable so that decisions about
+      data strategy and investment become more grounded and transparent.
+    </p>
+  </div>
 
-    <div class="bias-grid">
+  <div class="bias-grid">
 
-      <!-- Cobra effect -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Cb</div>
-          <h3>Cobra effect</h3>
-        </div>
+    <!-- Cobra effect -->
+    <article class="bias-card bias-theme-incentives">
+      <div class="bias-card-header">
+        <div class="bias-pill">Cb</div>
+        <h3>Cobra effect</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Incentives create unwanted behaviour.</p>
+      <h4>Risk</h4>
+      <p>Incentives create unwanted behaviour.</p>
 
-        <h4>How it appears</h4>
-        <p>Focus on outputs such as dashboards or datasets instead of real value.</p>
+      <h4>How it appears</h4>
+      <p>Focus on outputs such as dashboards or datasets instead of real value.</p>
 
-        <h4>Mitigation</h4>
-        <p>Use outcome indicators and feedback loops to ensure value is created.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Use outcome indicators and feedback loops to ensure value is created.</p>
+    </article>
 
-      <!-- Goodhart's law -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Gh</div>
-          <h3>Goodhart's law</h3>
-        </div>
+    <!-- Goodhart's law -->
+    <article class="bias-card bias-theme-measures">
+      <div class="bias-card-header">
+        <div class="bias-pill">Gh</div>
+        <h3>Goodhart's law</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Measures become targets and lose meaning.</p>
+      <h4>Risk</h4>
+      <p>Measures become targets and lose meaning.</p>
 
-        <h4>How it appears</h4>
-        <p>Maturity scores are inflated or dashboards are designed to stay green.</p>
+      <h4>How it appears</h4>
+      <p>Maturity scores are inflated or dashboards are designed to stay green.</p>
 
-        <h4>Mitigation</h4>
-        <p>Use shift indicators and test what the metric actually reveals.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Use shift indicators and test what the metric actually reveals.</p>
+    </article>
 
-      <!-- Availability bias -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Av</div>
-          <h3>Availability bias</h3>
-        </div>
+    <!-- Availability bias -->
+    <article class="bias-card bias-theme-perception">
+      <div class="bias-card-header">
+        <div class="bias-pill">Av</div>
+        <h3>Availability bias</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Recent or memorable issues dominate judgement.</p>
+      <h4>Risk</h4>
+      <p>Recent or memorable issues dominate judgement.</p>
 
-        <h4>How it appears</h4>
-        <p>Recent crises or loud anecdotes are treated as enterprise truth.</p>
+      <h4>How it appears</h4>
+      <p>Recent crises or loud anecdotes are treated as enterprise truth.</p>
 
-        <h4>Mitigation</h4>
-        <p>Look across all teams to find consistent patterns and signals.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Look across all teams to find consistent patterns and signals.</p>
+    </article>
 
-      <!-- Present bias -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Pr</div>
-          <h3>Present bias</h3>
-        </div>
+    <!-- Present bias -->
+    <article class="bias-card bias-theme-time">
+      <div class="bias-card-header">
+        <div class="bias-pill">Pr</div>
+        <h3>Present bias</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Short term wins over long term value.</p>
+      <h4>Risk</h4>
+      <p>Short term wins over long term value.</p>
 
-        <h4>How it appears</h4>
-        <p>Shiny use cases are prioritised over data quality or standards.</p>
+      <h4>How it appears</h4>
+      <p>Shiny use cases are prioritised over data quality or standards.</p>
 
-        <h4>Mitigation</h4>
-        <p>Show trade offs and connect foundations to later speed.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Show trade offs and connect foundations to later speed.</p>
+    </article>
 
-      <!-- Confirmation bias -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Cf</div>
-          <h3>Confirmation bias</h3>
-        </div>
+    <!-- Confirmation bias -->
+    <article class="bias-card bias-theme-perception">
+      <div class="bias-card-header">
+        <div class="bias-pill">Cf</div>
+        <h3>Confirmation bias</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Only looking for evidence that matches existing views.</p>
+      <h4>Risk</h4>
+      <p>Only looking for evidence that matches existing views.</p>
 
-        <h4>How it appears</h4>
-        <p>Data quality issues are rejected or AI is seen as the answer before diagnosis.</p>
+      <h4>How it appears</h4>
+      <p>Data quality issues are rejected or AI is seen as the answer before diagnosis.</p>
 
-        <h4>Mitigation</h4>
-        <p>Use challenge questions and search for evidence that contradicts assumptions.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Use challenge questions and search for evidence that contradicts assumptions.</p>
+    </article>
 
-      <!-- False precision -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Fp</div>
-          <h3>False precision</h3>
-        </div>
+    <!-- False precision -->
+    <article class="bias-card bias-theme-measures">
+      <div class="bias-card-header">
+        <div class="bias-pill">Fp</div>
+        <h3>False precision</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Believing complex systems can be quantified exactly.</p>
+      <h4>Risk</h4>
+      <p>Believing complex systems can be quantified exactly.</p>
 
-        <h4>How it appears</h4>
-        <p>Over confident scoring or narrow maturity levels without evidence.</p>
+      <h4>How it appears</h4>
+      <p>Over confident scoring or narrow maturity levels without evidence.</p>
 
-        <h4>Mitigation</h4>
-        <p>Use ranges, confidence levels and uncertainty notes.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Use ranges, confidence levels and uncertainty notes.</p>
+    </article>
 
-      <!-- Survivorship bias -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Sv</div>
-          <h3>Survivorship bias</h3>
-        </div>
+    <!-- Survivorship bias -->
+    <article class="bias-card bias-theme-perception">
+      <div class="bias-card-header">
+        <div class="bias-pill">Sv</div>
+        <h3>Survivorship bias</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Learning from winners but ignoring the long tail.</p>
+      <h4>Risk</h4>
+      <p>Learning from winners but ignoring the long tail.</p>
 
-        <h4>How it appears</h4>
-        <p>High performers are copied without understanding system constraints.</p>
+      <h4>How it appears</h4>
+      <p>High performers are copied without understanding system constraints.</p>
 
-        <h4>Mitigation</h4>
-        <p>Compare all teams and look for structural barriers.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Compare all teams and look for structural barriers.</p>
+    </article>
 
-      <!-- Optimism bias -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Op</div>
-          <h3>Optimism bias</h3>
-        </div>
+    <!-- Optimism bias -->
+    <article class="bias-card bias-theme-time">
+      <div class="bias-card-header">
+        <div class="bias-pill">Op</div>
+        <h3>Optimism bias</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Underestimating cost, time and complexity.</p>
+      <h4>Risk</h4>
+      <p>Underestimating cost, time and complexity.</p>
 
-        <h4>How it appears</h4>
-        <p>Ambitious timelines without enough resource or sequencing.</p>
+      <h4>How it appears</h4>
+      <p>Ambitious timelines without enough resource or sequencing.</p>
 
-        <h4>Mitigation</h4>
-        <p>Use pre mortems and delivery risk checks.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Use pre mortems and delivery risk checks.</p>
+    </article>
 
-      <!-- Sunk cost fallacy -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Sc</div>
-          <h3>Sunk cost fallacy</h3>
-        </div>
+    <!-- Sunk cost fallacy -->
+    <article class="bias-card bias-theme-incentives">
+      <div class="bias-card-header">
+        <div class="bias-pill">Sc</div>
+        <h3>Sunk cost fallacy</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Past investment drives future decisions.</p>
+      <h4>Risk</h4>
+      <p>Past investment drives future decisions.</p>
 
-        <h4>How it appears</h4>
-        <p>Legacy platforms or failing projects are kept alive because of prior spend.</p>
+      <h4>How it appears</h4>
+      <p>Legacy platforms or failing projects are kept alive because of prior spend.</p>
 
-        <h4>Mitigation</h4>
-        <p>Use stop criteria and review options independently of history.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Use stop criteria and review options independently of history.</p>
+    </article>
 
-      <!-- Halo effect -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Hl</div>
-          <h3>Halo effect</h3>
-        </div>
+    <!-- Halo effect -->
+    <article class="bias-card bias-theme-perception">
+      <div class="bias-card-header">
+        <div class="bias-pill">Hl</div>
+        <h3>Halo effect</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Overgeneralising from strong teams or leaders.</p>
+      <h4>Risk</h4>
+      <p>Overgeneralising from strong teams or leaders.</p>
 
-        <h4>How it appears</h4>
-        <p>Champions are used to represent system maturity.</p>
+      <h4>How it appears</h4>
+      <p>Champions are used to represent system maturity.</p>
 
-        <h4>Mitigation</h4>
-        <p>Look for system wide indicators and variability.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Look for system wide indicators and variability.</p>
+    </article>
 
-      <!-- Complexity blindness -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Cx</div>
-          <h3>Complexity blindness</h3>
-        </div>
+    <!-- Complexity blindness -->
+    <article class="bias-card bias-theme-complexity">
+      <div class="bias-card-header">
+        <div class="bias-pill">Cx</div>
+        <h3>Complexity blindness</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Ignoring dependencies across culture, skills, governance and platforms.</p>
+      <h4>Risk</h4>
+      <p>Ignoring dependencies across culture, skills, governance and platforms.</p>
 
-        <h4>How it appears</h4>
-        <p>Shifts are treated as isolated actions.</p>
+      <h4>How it appears</h4>
+      <p>Shifts are treated as isolated actions.</p>
 
-        <h4>Mitigation</h4>
-        <p>Use causal links and read across to understand enablers.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Use causal links and read across to understand enablers.</p>
+    </article>
 
-      <!-- Linear thinking -->
-      <article class="bias-card">
-        <div class="bias-card-header">
-          <div class="bias-pill">Ln</div>
-          <h3>Linear thinking</h3>
-        </div>
+    <!-- Linear thinking -->
+    <article class="bias-card bias-theme-complexity">
+      <div class="bias-card-header">
+        <div class="bias-pill">Ln</div>
+        <h3>Linear thinking</h3>
+      </div>
 
-        <h4>Risk</h4>
-        <p>Expecting smooth, predictable progress.</p>
+      <h4>Risk</h4>
+      <p>Expecting smooth, predictable progress.</p>
 
-        <h4>How it appears</h4>
-        <p>Culture or governance maturity is assumed to move step by step.</p>
+      <h4>How it appears</h4>
+      <p>Culture or governance maturity is assumed to move step by step.</p>
 
-        <h4>Mitigation</h4>
-        <p>Plan for dips, pauses and non linear change.</p>
-      </article>
+      <h4>Mitigation</h4>
+      <p>Plan for dips, pauses and non linear change.</p>
+    </article>
 
-    </div>
-  </section>
+  </div>
+</section>
+
 
   <footer>
     Metric catalogue and theory of change for the ValueLine: Data to Impact Model. Example department only, not real performance data.
