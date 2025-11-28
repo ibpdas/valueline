@@ -496,7 +496,141 @@
     color: #4b5563;
     margin-top: 2px;
   }
-  
+  /* Palette - adjust if you already have design tokens */
+:root {
+  --vl-bg: #f7fafc;
+  --vl-card-bg: #ffffff;
+  --vl-border-subtle: #e5e7eb;
+  --vl-border-strong: #cbd5f5;
+  --vl-text-main: #111827;
+  --vl-text-muted: #4b5563;
+  --vl-accent: #1d70b8;   /* Defra blue */
+  --vl-accent-soft: #e0f0ff;
+}
+
+/* Section wrapper */
+#bias-reminders {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(to bottom right, #f9fafb, #edf2ff);
+  border: 1px solid var(--vl-border-subtle);
+}
+
+/* Headings */
+#bias-reminders .section-title {
+  font-size: 1.4rem;
+  font-weight: 650;
+  color: var(--vl-text-main);
+  margin-bottom: 0.25rem;
+}
+
+#bias-reminders .section-subtitle {
+  font-size: 0.9rem;
+  color: var(--vl-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* Grid */
+.bias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* Card */
+.bias-card {
+  background-color: var(--vl-card-bg);
+  border-radius: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--vl-border-subtle);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+  transition: box-shadow 150ms ease, transform 150ms ease, border-color 150ms ease, background-color 150ms ease;
+}
+
+.bias-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--vl-border-strong);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  background-color: #fdfefe;
+}
+
+/* Card heading with pill */
+.bias-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bias-pill {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--vl-accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--vl-accent);
+}
+
+.bias-card h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--vl-text-main);
+}
+
+/* Labels and text */
+.bias-card h4 {
+  font-size: 0.8rem;
+  margin: 0.35rem 0 0.15rem 0;
+  color: var(--vl-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.bias-card p {
+  font-size: 0.85rem;
+  margin: 0 0 0.15rem 0;
+  color: var(--vl-text-main);
+}
+
+/* Make labels look like micro headings */
+.bias-card .label {
+  font-size: 0.75rem;
+  color: var(--vl-accent);
+}
+
+/* Dark mode sensitivity */
+@media (prefers-color-scheme: dark) {
+  #bias-reminders {
+    background: radial-gradient(circle at top left, #111827, #020617);
+    border-color: #1f2933;
+  }
+
+  .bias-card {
+    background-color: #020617;
+    border-color: #1f2937;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  }
+
+  .bias-card:hover {
+    background-color: #020617;
+    border-color: #3b82f6;
+  }
+
+  #bias-reminders .section-title,
+  #bias-reminders .section-subtitle,
+  .bias-card h3,
+  .bias-card p,
+  .bias-card h4 {
+    color: #e5e7eb;
+  }
+}
+
 </style>
 </head>
 
@@ -1572,6 +1706,220 @@ Data value is hard to prove in federated environments. This dashboard offers a p
       <li>More joined up workflows and evidence use</li>
     </ul>
   </div>
+<section id="bias-reminders">
+  <h2 class="section-title">Bias reminders</h2>
+  <p class="section-subtitle">
+    Use these prompts when interpreting diagnostics and selecting ValueLine shifts.
+  </p>
+
+  <div class="bias-grid">
+
+    <!-- Cobra effect -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Cb</div>
+        <h3>Cobra effect</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Incentives create unwanted behaviour.</p>
+
+      <h4>How it appears</h4>
+      <p>Focus on outputs such as dashboards or datasets instead of real value.</p>
+
+      <h4>Mitigation</h4>
+      <p>Use outcome indicators and feedback loops to ensure value is created.</p>
+    </article>
+
+    <!-- Goodhart's law -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Gh</div>
+        <h3>Goodhart's law</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Measures become targets and lose meaning.</p>
+
+      <h4>How it appears</h4>
+      <p>Maturity scores are inflated or dashboards are designed to stay green.</p>
+
+      <h4>Mitigation</h4>
+      <p>Use shift indicators and test what the metric actually reveals.</p>
+    </article>
+
+    <!-- Availability bias -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Av</div>
+        <h3>Availability bias</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Recent or memorable issues dominate judgement.</p>
+
+      <h4>How it appears</h4>
+      <p>Recent crises or loud anecdotes are treated as enterprise truth.</p>
+
+      <h4>Mitigation</h4>
+      <p>Look across all teams to find consistent patterns and signals.</p>
+    </article>
+
+    <!-- Present bias -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Pr</div>
+        <h3>Present bias</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Short term wins over long term value.</p>
+
+      <h4>How it appears</h4>
+      <p>Shiny use cases are prioritised over data quality or standards.</p>
+
+      <h4>Mitigation</h4>
+      <p>Show trade offs and connect foundations to later speed.</p>
+    </article>
+
+    <!-- Confirmation bias -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Cf</div>
+        <h3>Confirmation bias</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Only looking for evidence that matches existing views.</p>
+
+      <h4>How it appears</h4>
+      <p>Data quality issues are rejected or AI is seen as the answer before diagnosis.</p>
+
+      <h4>Mitigation</h4>
+      <p>Use challenge questions and search for evidence that contradicts assumptions.</p>
+    </article>
+
+    <!-- False precision -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Fp</div>
+        <h3>False precision</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Believing complex systems can be quantified exactly.</p>
+
+      <h4>How it appears</h4>
+      <p>Over confident scoring or narrow maturity levels without evidence.</p>
+
+      <h4>Mitigation</h4>
+      <p>Use ranges, confidence levels and uncertainty notes.</p>
+    </article>
+
+    <!-- Survivorship bias -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Sv</div>
+        <h3>Survivorship bias</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Learning from winners but ignoring the long tail.</p>
+
+      <h4>How it appears</h4>
+      <p>High performers are copied without understanding system constraints.</p>
+
+      <h4>Mitigation</h4>
+      <p>Compare all teams and look for structural barriers.</p>
+    </article>
+
+    <!-- Optimism bias -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Op</div>
+        <h3>Optimism bias</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Underestimating cost, time and complexity.</p>
+
+      <h4>How it appears</h4>
+      <p>Ambitious timelines without enough resource or sequencing.</p>
+
+      <h4>Mitigation</h4>
+      <p>Use pre-mortems and delivery risk checks.</p>
+    </article>
+
+    <!-- Sunk cost fallacy -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Sc</div>
+        <h3>Sunk cost fallacy</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Past investment drives future decisions.</p>
+
+      <h4>How it appears</h4>
+      <p>Legacy platforms or failing projects are kept alive because of prior spend.</p>
+
+      <h4>Mitigation</h4>
+      <p>Use stop criteria and review options independently of history.</p>
+    </article>
+
+    <!-- Halo effect -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Hl</div>
+        <h3>Halo effect</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Overgeneralising from strong teams or leaders.</p>
+
+      <h4>How it appears</h4>
+      <p>Champions are used to represent system maturity.</p>
+
+      <h4>Mitigation</h4>
+      <p>Look for system wide indicators and variability.</p>
+    </article>
+
+    <!-- Complexity blindness -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Cx</div>
+        <h3>Complexity blindness</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Ignoring dependencies across culture, skills, governance and platforms.</p>
+
+      <h4>How it appears</h4>
+      <p>Shifts are treated as isolated actions.</p>
+
+      <h4>Mitigation</h4>
+      <p>Use causal links and read across to understand enablers.</p>
+    </article>
+
+    <!-- Linear thinking -->
+    <article class="bias-card">
+      <div class="bias-card-header">
+        <div class="bias-pill">Ln</div>
+        <h3>Linear thinking</h3>
+      </div>
+
+      <h4>Risk</h4>
+      <p>Expecting smooth, predictable progress.</p>
+
+      <h4>How it appears</h4>
+      <p>Culture or governance maturity is assumed to move step by step.</p>
+
+      <h4>Mitigation</h4>
+      <p>Plan for dips, pauses and non linear change.</p>
+    </article>
+
+  </div>
+</section>
 
 </div>
 
