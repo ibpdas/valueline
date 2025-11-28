@@ -1,618 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title> ValueLine - Data Strategy Impact Dashboard - Model Department X</title>
-<style>
-  :root {
-    --bg: #ffffff;
-    --card-bg: #ffffff;
-    --border: #e0e0e0;
-    --text-main: #111111;
-    --text-muted: #555555;
-    --pill-bg: #f8fafc;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    padding: 24px;
-    background: var(--bg);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: var(--text-main);
-  }
-
-  .page { max-width: 1400px; margin: 0 auto; }
-
-  .page-break {
-    page-break-before: always;
-    margin-top: 40px;
-    border-top: 2px dashed #e5e7eb;
-    padding-top: 24px;
-  }
-
-  h1 { margin: 0 0 4px; font-size: 32px; }
-
-  .hero {
-    background: #f3f4f6;
-    border: 1px solid #e5e7eb;
-    padding: 20px 24px;
-    border-radius: 8px;
-    margin-bottom: 16px;
-  }
-
-  .hero h1 {
-    margin: 0 0 8px 0;
-    font-size: 26px;
-  }
-
-  .hero-sub {
-    margin: 0 0 6px 0;
-    font-size: 14px;
-    color: #555555;
-  }
-
-  .pill {
-    background:#eef2f7;
-    border:1px solid #d1d5db;
-    padding:4px 10px;
-    border-radius:12px;
-    font-size:12px;
-    font-weight:600;
-  }
-
-  .summary-strip {
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 14px 18px;
-    font-size: 13px;
-    margin-bottom: 16px;
-  }
-
-  .summary-strip-title {
-    font-weight: 700;
-    margin-bottom: 4px;
-  }
-
-  .layout {
-    display: grid;
-    grid-template-columns: 2.1fr 1.2fr;
-    gap: 20px;
-  }
-
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 16px 18px;
-    margin-bottom: 12px;
-  }
-
-  .card-title {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 4px;
-  }
-
-  .card-subtitle {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-  }
-
-  .pillars-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-
-  .pillar-card {
-    background: var(--pill-bg);
-    border-radius: 8px;
-    padding: 10px 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .pillar-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6px;
-  }
-
-  .pillar-name {
-    font-size: 13px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    flex-wrap: wrap;
-  }
-
-  .status-pill {
-    display: inline-flex;
-    align-items: center;
-    padding: 3px 10px;
-    border-radius: 999px;
-    font-size: 11px;
-    font-weight: 600;
-    border: 1px solid #e5e7eb;
-  }
-
-  .status-ontrack { background: #dcfce7; color: #166534; }
-  .status-needfocus { background: #fef9c3; color: #92400e; }
-  .status-offtrack { background: #fee2e2; color: #991b1b; }
-
-  .pillar-body {
-    font-size: 11px;
-    color: var(--text-muted);
-    line-height: 1.4;
-  }
-
-  .tag {
-    display: inline-block;
-    padding: 5px 11px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    font-size: 11px;
-    font-weight: 600;
-    background: #f9fafb;
-    margin-top: 8px;
-  }
-
-  .trend-card {
-    margin-top: 10px;
-    padding: 8px 10px;
-    border-radius: 8px;
-    border: 1px dashed var(--border);
-    background: #f9fafb;
-  }
-
-  .trend-title {
-    font-size: 11px;
-    color: var(--text-muted);
-    margin-bottom: 4px;
-  }
-
-  .trend-chart {
-    width: 100%;
-    height: 40px;
-  }
-
-  .maturity-layout {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-
-  .maturity-text {
-    font-size: 12px;
-    color: var(--text-muted);
-    line-height: 1.4;
-  }
-
-  .radar-container {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
-
-  .maturity-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 12px;
-    margin-top: 4px;
-  }
-
-  .maturity-table th,
-  .maturity-table td {
-    padding: 4px 6px;
-    text-align: left;
-    vertical-align: top;
-  }
-
-  .maturity-table th {
-    font-size: 11px;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .maturity-notes {
-    font-size: 11px;
-    color: var(--text-muted);
-  }
-
-  .metric-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-    font-size: 13px;
-    gap: 8px;
-  }
-
-  .metric-label {
-    color: var(--text-muted);
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-
-  .metric-value {
-    font-size: 18px;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-
-  .metric-value-small {
-    font-size: 13px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-
-  .metric-plan {
-    font-size: 11px;
-    color: #6b7280;
-    margin-left: 4px;
-    white-space: nowrap;
-  }
-
-  .impact-block-title {
-    font-size: 14px;
-    font-weight: 700;
-    margin: 14px 0 4px;
-  }
-
-  .impact-item-title {
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 2px;
-  }
-
-  .impact-item-text {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-bottom: 6px;
-    line-height: 1.4;
-  }
-
-  .badge {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 999px;
-    font-size: 10px;
-    font-weight: 700;
-    margin-left: 4px;
-    color: #ffffff;
-    white-space: nowrap;
-  }
-
-  .badge-leading { background: #0ea5e9; }
-  .badge-signal  { background: #6b7280; }
-  .badge-lagging { background: #a855f7; }
-
-  footer {
-    margin-top: 32px;
-    font-size: 11px;
-    color: #9ca3af;
-    text-align: center;
-  }
-
-  /* New styles for Level 2 maturity heat bar */
-  .heat-bar-wrapper {
-    margin-top: 8px;
-    margin-bottom: 6px;
-  }
-
-  .heat-bar-label-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    font-size: 12px;
-    color: var(--text-muted);
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  .heat-bar {
-    position: relative;
-    width: 100%;
-    height: 10px;
-    border-radius: 999px;
-    background: #e5e7eb;
-    margin: 6px 0 4px;
-    overflow: hidden;
-  }
-
-  .heat-bar-fill {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    border-radius: 999px;
-    background: #3b82f6;
-    width: 60%;
-  }
-
-  .heat-bar-scale {
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
-    color: var(--text-muted);
-    margin-top: 2px;
-  }
-
-  .maturity-dimensions {
-    font-size: 11px;
-    color: var(--text-muted);
-    margin-top: 6px;
-  }
-
-  /* Theory of change visual lanes */
-  .toc-lane-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr;
-    gap: 6px;
-    margin-top: 10px;
-    font-size: 11px;
-  }
-
-  .toc-lane-header {
-    font-size: 11px;
-    font-weight: 700;
-    color: #374151;
-    text-align: center;
-  }
-
-  .toc-lane-header-stage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-  }
-
-  .toc-lane-pill {
-    padding: 2px 8px;
-    border-radius: 999px;
-    background: #e5e7eb;
-    font-size: 10px;
-    font-weight: 600;
-    color: #111827;
-  }
-
-  .toc-lane-row {
-    display: contents;
-  }
-
-  .toc-foundation-name {
-    font-weight: 600;
-    font-size: 12px;
-    color: #111827;
-    padding: 6px 4px;
-    border-top: 1px solid #e5e7eb;
-  }
-
-  .toc-stage {
-    border-radius: 8px;
-    padding: 6px 8px;
-    border: 1px solid #e5e7eb;
-    line-height: 1.45;
-    color: #4b5563;
-    border-top-width: 2px;
-    font-size: 11px;
-  }
-
-  .toc-stage-input {
-    background: #eff6ff;
-    border-top-color: #3b82f6;
-  }
-
-  .toc-stage-output {
-    background: #ecfdf5;
-    border-top-color: #10b981;
-  }
-
-  .toc-stage-outcome {
-    background: #fef3c7;
-    border-top-color: #f59e0b;
-  }
-
-  .toc-stage-impact {
-    background: #f3e8ff;
-    border-top-color: #a855f7;
-  }
-
-  .toc-stage-label {
-    font-weight: 600;
-    font-size: 11px;
-    margin-bottom: 2px;
-    color: #111827;
-  }
-
-  .toc-stage-text {
-    font-size: 11px;
-  }
-
-  .toc-lane-arrow-row {
-    display: grid;
-    grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr;
-    margin-top: 6px;
-    margin-bottom: 4px;
-    font-size: 10px;
-    color: #6b7280;
-  }
-
-  .toc-lane-arrow-row > div {
-    text-align: center;
-  }
-
-  /* ...your existing styles... */
-
-  .readme-callout {
-    margin: 8px 0 16px;
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid #dbeafe;
-    background: #eff6ff;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 13px;
-    color: #1f2933;
-  }
-
-  .readme-callout-icon {
-    font-size: 18px;
-    line-height: 1;
-  }
-
-  .readme-callout-main {
-    font-weight: 600;
-  }
-
-  .readme-callout a {
-    font-weight: 700;
-    text-decoration: none;
-    color: #1d4ed8;
-  }
-
-  .readme-callout a:hover {
-    text-decoration: underline;
-  }
-
-  .readme-callout-note {
-    display: block;
-    font-weight: 400;
-    color: #4b5563;
-    margin-top: 2px;
-  }
-  /* Bias reminders section */
-#bias-reminders {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border-radius: 16px;
-  background: linear-gradient(to bottom right, #f9fafb, #edf2ff);
-  border: 1px solid #e5e7eb;
-}
-
-/* Section heading and subtitle */
-#bias-reminders .section-title {
-  font-size: 1.4rem;
-  font-weight: 650;
-  margin-bottom: 0.25rem;
-  color: #111827;
-}
-
-#bias-reminders .section-subtitle {
-  font-size: 0.9rem;
-  color: #4b5563;
-  margin-bottom: 1.25rem;
-}
-
-/* Grid layout for cards */
-.bias-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-}
-
-/* Individual card */
-.bias-card {
-  background-color: #ffffff;
-  border-radius: 14px;
-  padding: 14px 16px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
-  transition: box-shadow 150ms ease, transform 150ms ease, border-color 150ms ease, background-color 150ms ease;
-}
-
-.bias-card:hover {
-  transform: translateY(-1px);
-  border-color: #cbd5f5;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-  background-color: #fdfefe;
-}
-
-/* Card header with small pill */
-.bias-card-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.bias-pill {
-  width: 26px;
-  height: 26px;
-  border-radius: 999px;
-  background: #e0f0ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #1d70b8;
-}
-
-.bias-card h3 {
-  font-size: 1rem;
-  margin: 0;
-  color: #111827;
-}
-
-/* Labels */
-.bias-card h4 {
-  font-size: 0.8rem;
-  margin: 0.35rem 0 0.15rem 0;
-  color: #4b5563;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
-.bias-card p {
-  font-size: 0.85rem;
-  margin: 0 0 0.15rem 0;
-  color: #111827;
-}
-
-/* Dark mode sensitivity */
-@media (prefers-color-scheme: dark) {
-  #bias-reminders {
-    background: radial-gradient(circle at top left, #111827, #020617);
-    border-color: #1f2933;
-  }
-
-  .bias-card {
-    background-color: #020617;
-    border-color: #1f2937;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-  }
-
-  .bias-card:hover {
-    background-color: #020617;
-    border-color: #3b82f6;
-  }
-
-  #bias-reminders .section-title,
-  #bias-reminders .section-subtitle,
-  .bias-card h3,
-  .bias-card p,
-  .bias-card h4 {
-    color: #e5e7eb;
-  }
-}
-</style>
+  <meta charset="UTF-8" />
+  <title>ValueLine - Data Strategy Impact Dashboard - Model Department X</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card-bg: #ffffff;
+      --border: #e0e0e0;
+      --text-main: #111111;
+      --text-muted: #555555;
+      --pill-bg: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+    }
+
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .page-break {
+      page-break-before: always;
+      margin-top: 40px;
+      border-top: 2px dashed #e5e7eb;
+      padding-top: 24px;
+    }
+
+    h1 {
+      margin: 0 0 4px;
+      font-size: 32px;
+    }
+
+    .hero {
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      padding: 20px 24px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px 0;
+      font-size: 26px;
+    }
+
+    .hero-sub {
+      margin: 0 0 6px 0;
+      font-size: 14px;
+      color: #555555;
+    }
+
+    .pill {
+      background: #eef2f7;
+      border: 1px solid #d1d5db;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .summary-strip {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .summary-strip-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 2.1fr 1.2fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .card-subtitle {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .pillar-card {
+      background: var(--pill-bg);
+      border-radius: 8px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .pillar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    .pillar-name {
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid #e5e7eb;
+    }
+
+    .status-ontrack {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .status-needfocus {
+      background: #fef9c3;
+      color: #92400e;
+    }
+
+    .status-offtrack {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .pillar-body {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 11px;
+      font-weight: 600;
+      background: #f9fafb;
+      margin-top: 8px;
+    }
+
+    .trend-card {
+      margin-top: 10px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px dashed var(--border);
+      background: #f9fafb;
+    }
+
+    .trend-title {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .trend-chart {
+      width: 100%;
+      height: 40px;
+    }
+
+    .maturity-layout {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .maturity-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .radar-container {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+
+    .maturity-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .maturity-table th,
+    .maturity-table td {
+      padding: 4px 6px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .maturity-table th {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .maturity-notes {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 13px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .metric-label {
+      color: var(--text-muted);
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .metric-value {
+      font-size: 18px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .metric-value-small {
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .metric-plan {
+      font-size: 11px;
+      color: #6b7280;
+      margin-left: 4px;
+      white-space: nowrap;
+    }
+
+    .impact-block-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin: 14px 0 4px;
+    }
+
+    .impact-item-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .impact-item-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-left: 4px;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+
+    .badge-leading {
+      background: #0ea5e9;
+    }
+
+    .badge-signal {
+      background: #6b7280;
+    }
+
+    .badge-lagging {
+      background: #a855f7;
+    }
+
+    footer {
+      margin-top: 32px;
+      font-size: 11px;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    /* Level 2 maturity heat bar */
+    .heat-bar-wrapper {
+      margin-top: 8px;
+      margin-bottom: 6px;
+    }
+
+    .heat-bar-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 12px;
+      color: var(--text-muted);
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .heat-bar {
+      position: relative;
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      margin: 6px 0 4px;
+      overflow: hidden;
+    }
+
+    .heat-bar-fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      border-radius: 999px;
+      background: #3b82f6;
+      width: 60%;
+    }
+
+    .heat-bar-scale {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .maturity-dimensions {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* Theory of change visual lanes */
+    .toc-lane-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr;
+      gap: 6px;
+      margin-top: 10px;
+      font-size: 11px;
+    }
+
+    .toc-lane-header {
+      font-size: 11px;
+      font-weight: 700;
+      color: #374151;
+      text-align: center;
+    }
+
+    .toc-lane-header-stage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .toc-lane-pill {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      font-size: 10px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .toc-foundation-name {
+      font-weight: 600;
+      font-size: 12px;
+      color: #111827;
+      padding: 6px 4px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .toc-stage {
+      border-radius: 8px;
+      padding: 6px 8px;
+      border: 1px solid #e5e7eb;
+      line-height: 1.45;
+      color: #4b5563;
+      border-top-width: 2px;
+      font-size: 11px;
+    }
+
+    .toc-stage-input {
+      background: #eff6ff;
+      border-top-color: #3b82f6;
+    }
+
+    .toc-stage-output {
+      background: #ecfdf5;
+      border-top-color: #10b981;
+    }
+
+    .toc-stage-outcome {
+      background: #fef3c7;
+      border-top-color: #f59e0b;
+    }
+
+    .toc-stage-impact {
+      background: #f3e8ff;
+      border-top-color: #a855f7;
+    }
+
+    .toc-lane-arrow-row {
+      display: grid;
+      grid-template-columns: 0.9fr 1fr 1fr 1fr 1fr;
+      margin-top: 6px;
+      margin-bottom: 4px;
+      font-size: 10px;
+      color: #6b7280;
+    }
+
+    .toc-lane-arrow-row > div {
+      text-align: center;
+    }
+
+    .readme-callout {
+      margin: 8px 0 16px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #dbeafe;
+      background: #eff6ff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #1f2933;
+    }
+
+    .readme-callout-icon {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .readme-callout-main {
+      font-weight: 600;
+    }
+
+    .readme-callout a {
+      font-weight: 700;
+      text-decoration: none;
+      color: #1d4ed8;
+    }
+
+    .readme-callout a:hover {
+      text-decoration: underline;
+    }
+
+    .readme-callout-note {
+      display: block;
+      font-weight: 400;
+      color: #4b5563;
+      margin-top: 2px;
+    }
+
+    /* Bias reminders section */
+    #bias-reminders {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-radius: 16px;
+      background: linear-gradient(to bottom right, #f9fafb, #edf2ff);
+      border: 1px solid #e5e7eb;
+    }
+
+    #bias-reminders .section-title {
+      font-size: 1.4rem;
+      font-weight: 650;
+      margin-bottom: 0.25rem;
+      color: #111827;
+    }
+
+    #bias-reminders .section-subtitle {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 1.25rem;
+    }
+
+    .bias-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .bias-card {
+      background-color: #ffffff;
+      border-radius: 14px;
+      padding: 14px 16px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      transition: box-shadow 150ms ease, transform 150ms ease, border-color 150ms ease, background-color 150ms ease;
+    }
+
+    .bias-card:hover {
+      transform: translateY(-1px);
+      border-color: #cbd5f5;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      background-color: #fdfefe;
+    }
+
+    .bias-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .bias-pill {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: #e0f0ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #1d70b8;
+    }
+
+    .bias-card h3 {
+      font-size: 1rem;
+      margin: 0;
+      color: #111827;
+    }
+
+    .bias-card h4 {
+      font-size: 0.8rem;
+      margin: 0.35rem 0 0.15rem 0;
+      color: #4b5563;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .bias-card p {
+      font-size: 0.85rem;
+      margin: 0 0 0.15rem 0;
+      color: #111827;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #bias-reminders {
+        background: radial-gradient(circle at top left, #111827, #020617);
+        border-color: #1f2933;
+      }
+
+      .bias-card {
+        background-color: #020617;
+        border-color: #1f2937;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      }
+
+      .bias-card:hover {
+        background-color: #020617;
+        border-color: #3b82f6;
+      }
+
+      #bias-reminders .section-title,
+      #bias-reminders .section-subtitle,
+      .bias-card h3,
+      .bias-card p,
+      .bias-card h4 {
+        color: #e5e7eb;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -623,7 +629,8 @@
   <div class="hero">
     <h1>ValueLine - Data Strategy Impact Dashboard</h1>
     <p class="hero-sub">
-Data value is hard to prove in federated environments. This dashboard offers a practical way to focus on what matters, show what’s improving, and highlight where action is needed.
+      Data value is hard to prove in federated environments. This dashboard offers a practical way to focus on what matters,
+      show what is improving, and highlight where action is needed.
     </p>
 
     <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:6px;">
@@ -633,25 +640,28 @@ Data value is hard to prove in federated environments. This dashboard offers a p
     </div>
   </div>
 
-<div class="readme-callout">
-  <div class="readme-callout-icon">📘</div>
-  <div>
-    <span class="readme-callout-main">
-<a href="https://github.com/ibpdas/data-strategy-impact-dashboard/blob/main/README.md"
-   target="_blank">
-  Read the README first
-</a>
-    </span>
-    <span class="readme-callout-note">
-      This dashboard is guided by the <strong>ValueLine: Data to Impact Model</strong>, a causal chain for accelerating path to value. README explains the problem, approach and utility.
-    </span>
-  </div>
-</div>
-  
-  <div class="summary-strip">
-    <div class="summary-strip-title">For Executive Level Board - Overall position this period</div>
+  <div class="readme-callout">
+    <div class="readme-callout-icon">📘</div>
     <div>
-      On track overall, but constrained by funding certainties and uneven adoption of common foundations such as policies and standards in a changing environment. Slowing progress on foundational fixes risks delaying maturity improvements and later outcome and impact benefits.
+      <span class="readme-callout-main">
+        <a href="https://github.com/ibpdas/data-strategy-impact-dashboard/blob/main/README.md"
+           target="_blank">
+          Read the README first
+        </a>
+      </span>
+      <span class="readme-callout-note">
+        This dashboard is guided by the <strong>ValueLine: Data to Impact Model</strong>,
+        a causal chain for accelerating path to value. The README explains the problem, approach and utility.
+      </span>
+    </div>
+  </div>
+
+  <div class="summary-strip">
+    <div class="summary-strip-title">For Executive Level Board - overall position this period</div>
+    <div>
+      On track overall, but constrained by funding certainties and uneven adoption of common foundations such as policies and standards
+      in a changing environment. Slowing progress on foundational fixes risks delaying maturity improvements and later outcome and
+      impact benefits.
     </div>
   </div>
 
@@ -740,7 +750,6 @@ Data value is hard to prove in federated environments. This dashboard offers a p
           </svg>
         </div>
 
-        <!-- Federated snapshot inside Level 1 -->
         <div class="trend-card">
           <div class="trend-title">Federated partner snapshot</div>
           <table class="maturity-table">
@@ -775,10 +784,15 @@ Data value is hard to prove in federated environments. This dashboard offers a p
         <span class="tag">ENABLE</span>
       </div>
 
-      <!-- QUICK WIN METRICS -->
+      <!-- ACCELERATOR PROJECTS -->
       <div class="card" style="border-top:3px solid #10b981;">
-        <div class="card-title">Accelerator projects (Level 1)<span class="badge badge-leading">LEADING</span></div>
-        <div class="card-subtitle">High visibility, iterative deliverables that create confidence and support.</div>
+        <div class="card-title">
+          Accelerator projects (Level 1)
+          <span class="badge badge-leading">LEADING</span>
+        </div>
+        <div class="card-subtitle">
+          High visibility, iterative deliverables that create confidence and support.
+        </div>
 
         <table class="maturity-table">
           <thead>
@@ -801,7 +815,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
               </td>
             </tr>
             <tr>
-              <td>Data Ownership Coverage</td>
+              <td>Data ownership coverage</td>
               <td>Domains onboarded</td>
               <td>6</td>
               <td>10</td>
@@ -810,7 +824,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
               </td>
             </tr>
             <tr>
-              <td>Data Festival Spotlight</td>
+              <td>Data festival spotlight</td>
               <td>Attendance</td>
               <td>5k</td>
               <td>3k</td>
@@ -824,7 +838,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
         <span class="tag">ENABLE</span>
       </div>
 
-      <!-- LEVEL 2 - HEAT BAR VIEW -->
+      <!-- LEVEL 2 -->
       <div class="card" style="border-top:3px solid #3b82f6;">
         <div class="card-title">Enable data maturity (Level 2)</div>
         <div class="card-subtitle">
@@ -834,7 +848,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
         <div class="heat-bar-wrapper">
           <div class="heat-bar-label-row">
             <span>Overall maturity rating</span>
-            <span><strong>3 of 5</strong> - Above emerging, below established</span>
+            <span><strong>3 of 5</strong> - above emerging, below established</span>
           </div>
 
           <div class="heat-bar">
@@ -880,6 +894,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
             <span class="metric-plan">(plan £10m)</span>
           </div>
         </div>
+
         <div class="metric-row">
           <div class="metric-label">
             User satisfaction
@@ -890,6 +905,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
             <span class="metric-plan">(plan 75%)</span>
           </div>
         </div>
+
         <div class="metric-row">
           <div class="metric-label">
             Efficiency
@@ -900,6 +916,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
             <span class="metric-plan">(target High)</span>
           </div>
         </div>
+
         <div class="metric-row">
           <div class="metric-label">
             Time savings
@@ -910,6 +927,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
             <span class="metric-plan">(plan 1,000)</span>
           </div>
         </div>
+
         <div class="metric-row">
           <div class="metric-label">
             Public good
@@ -922,7 +940,8 @@ Data value is hard to prove in federated environments. This dashboard offers a p
         </div>
 
         <div class="impact-item-text" style="margin-top:10px;">
-          <strong>Benefits horizon:</strong> Most movement in outcomes and impact is expected in years 3 and 4 as foundations and maturity strengthen.
+          <strong>Benefits horizon:</strong> Most movement in outcomes and impact is expected in years 3 and 4 as foundations
+          and maturity strengthen.
         </div>
 
         <div class="card" style="border-top:3px solid #f97316; margin-top:12px;">
@@ -1013,16 +1032,18 @@ Data value is hard to prove in federated environments. This dashboard offers a p
 <div class="page page-break">
 
   <div class="hero">
-    <h1>Methodology – How to read this dashboard</h1>
-    <p class="hero-sub">Model explanation, mixed-method measurement and evidence guidance.</p>
+    <h1>Methodology: How to read this dashboard</h1>
+    <p class="hero-sub">Model explanation, mixed method measurement and evidence guidance.</p>
 
     <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:6px; font-size:11px;">
       <span class="pill">ValueLine: Data to Impact Model</span>
       <span class="pill">Illustrative example only</span>
-      <span class="pill"><a href="https://github.com/ibpdas/data-strategy-impact-dashboard/blob/main/README.md"
-   style="color:#1d70b8; text-decoration:none;" target="_blank">
-  Read the README first →
-</a></span>
+      <span class="pill">
+        <a href="https://github.com/ibpdas/data-strategy-impact-dashboard/blob/main/README.md"
+           style="color:#1d70b8; text-decoration:none;" target="_blank">
+          Read the README first →
+        </a>
+      </span>
     </div>
   </div>
 
@@ -1037,11 +1058,8 @@ Data value is hard to prove in federated environments. This dashboard offers a p
       It helps leaders interpret progress in the right order and avoid unrealistic expectations of outcomes before system conditions are ready.
     </p>
 
-    <!-- Flowchart -->
     <div style="text-align:center; margin: 10px 0 4px;">
       <svg width="720" height="260" xmlns="http://www.w3.org/2000/svg">
-
-        <!-- Row 1: Forward Flow -->
         <rect x="40" y="20" width="160" height="60" fill="#ffffff" stroke="#9ca3af" rx="6"/>
         <text x="120" y="50" text-anchor="middle" font-size="13" font-weight="600">Level 1</text>
         <text x="120" y="68" text-anchor="middle" font-size="12" fill="#555">Foundations</text>
@@ -1054,13 +1072,11 @@ Data value is hard to prove in federated environments. This dashboard offers a p
         <text x="600" y="50" text-anchor="middle" font-size="13" font-weight="600">Level 3</text>
         <text x="600" y="68" text-anchor="middle" font-size="12" fill="#555">Outcomes & Impact</text>
 
-        <!-- Forward arrows -->
         <line x1="200" y1="50" x2="280" y2="50" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
         <line x1="440" y1="50" x2="520" y2="50" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-        <!-- Row 2: Backward loop -->
         <rect x="40" y="160" width="160" height="60" fill="#f9fafb" stroke="#9ca3af" rx="6"/>
-        <text x="120" y="190" text-anchor="middle" font-size="13" font-weight="600">Co-designed</text>
+        <text x="120" y="190" text-anchor="middle" font-size="13" font-weight="600">Co designed</text>
         <text x="120" y="208" text-anchor="middle" font-size="12" fill="#555">with Levels 2 & 3</text>
 
         <rect x="280" y="160" width="160" height="60" fill="#f9fafb" stroke="#9ca3af" rx="6"/>
@@ -1071,15 +1087,12 @@ Data value is hard to prove in federated environments. This dashboard offers a p
         <text x="600" y="190" text-anchor="middle" font-size="13" font-weight="600">Direction</text>
         <text x="600" y="208" text-anchor="middle" font-size="12" fill="#555">desired public value</text>
 
-        <!-- Backwards arrows -->
         <line x1="520" y1="190" x2="440" y2="190" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
         <line x1="280" y1="190" x2="200" y2="190" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-        <!-- Vertical arrows -->
         <line x1="120" y1="80" x2="120" y2="160" stroke="#6b7280" stroke-width="1.2" marker-end="url(#arrow)"/>
         <line x1="600" y1="80" x2="600" y2="160" stroke="#6b7280" stroke-width="1.2" marker-end="url(#arrow)"/>
 
-        <!-- Arrowhead -->
         <defs>
           <marker id="arrow" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
             <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280" />
@@ -1089,7 +1102,8 @@ Data value is hard to prove in federated environments. This dashboard offers a p
     </div>
 
     <div style="margin-top:8px; background:#f8f9fa; border:1px solid #e5e7eb; padding:10px 12px; border-radius:8px; font-size:12px; color:#444;">
-      This three-level structure helps set realistic expectations: Level 1 moves fastest, Level 2 takes longer, and Level 3 lags behind both.
+      This three level structure helps set realistic expectations: Level 1 moves fastest, Level 2 takes longer,
+      and Level 3 lags behind both.
     </div>
 
     <span class="tag" style="margin-top:10px;">METHOD</span>
@@ -1101,7 +1115,6 @@ Data value is hard to prove in federated environments. This dashboard offers a p
     <div class="card-subtitle">What each level represents in practice.</div>
 
     <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-top:10px; font-size:13px;">
-
       <div style="background:#f9fafb; padding:10px; border-radius:8px;">
         <strong>Level 1 foundations <span class="badge badge-leading">LEADING</span></strong>
         <p style="margin:6px 0;">
@@ -1112,7 +1125,8 @@ Data value is hard to prove in federated environments. This dashboard offers a p
       <div style="background:#f9fafb; padding:10px; border-radius:8px;">
         <strong>Level 2 maturity <span class="badge badge-signal">SIGNAL</span></strong>
         <p style="margin:6px 0;">
-          System behaviour across uses, data, leadership, culture, tools and skills. Changes appear gradually as conditions improve.
+          System behaviour across uses, data, leadership, culture, tools and skills.
+          Changes appear gradually as conditions improve.
         </p>
       </div>
 
@@ -1122,7 +1136,6 @@ Data value is hard to prove in federated environments. This dashboard offers a p
           Measurable value such as savings, satisfaction and time saved. These move last and require aligned maturity.
         </p>
       </div>
-
     </div>
 
     <span class="tag">LEVELS</span>
@@ -1134,13 +1147,13 @@ Data value is hard to prove in federated environments. This dashboard offers a p
     <div class="card-subtitle">A shared language for interpreting progress.</div>
 
     <ul style="font-size:13px; color:#444; line-height:1.6;">
-      <li><strong>Leading indicators</strong> – early signs that foundational work is taking effect.</li>
-      <li><strong>Signal indicators</strong> – how the system is responding and adopting new practices.</li>
-      <li><strong>Lagging indicators</strong> – realised outcomes and public value.</li>
+      <li><strong>Leading indicators</strong> - early signs that foundational work is taking effect.</li>
+      <li><strong>Signal indicators</strong> - how the system is responding and adopting new practices.</li>
+      <li><strong>Lagging indicators</strong> - realised outcomes and public value.</li>
     </ul>
 
     <p style="font-size:12px; color:#6b7280;">
-      Different indicators move at different speeds — this prevents unrealistic pressure for outcomes before conditions are ready.
+      Different indicators move at different speeds. This prevents unrealistic pressure for outcomes before conditions are ready.
     </p>
 
     <span class="tag">INDICATORS</span>
@@ -1148,46 +1161,42 @@ Data value is hard to prove in federated environments. This dashboard offers a p
 
   <!-- CARD 4: Mixed method measurement -->
   <div class="card" style="border-top:3px solid #10b981;">
-    <div class="card-title">Mixed-method measurement</div>
+    <div class="card-title">Mixed method measurement</div>
     <div class="card-subtitle">Why multiple evidence types are needed.</div>
 
     <p style="font-size:13px; color:#444; line-height:1.55;">
-      The model encourages a balanced approach, combining quantitative, qualitative and economic evidence.  
-      No single metric captures capability or public value — mixed methods provide a fuller picture.
+      The model encourages a balanced approach, combining quantitative, qualitative and economic evidence.
+      No single metric captures capability or public value. Mixed methods provide a fuller picture.
     </p>
 
     <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; font-size:12px; margin-top:12px;">
-
-      <!-- Quantitative -->
       <div style="background:#f9fafb; padding:10px; border-radius:8px;">
         <strong>Quantitative (Leading / Signal / Lagging)</strong>
         <ul style="padding-left:18px; line-height:1.5; margin-top:6px;">
           <li>performance reports</li>
           <li>leadership updates</li>
-          <li>cost & time savings</li>
-          <li>policy/standards adoption</li>
-          <li>dataset & model reuse</li>
-          <li>API & open data analytics</li>
+          <li>cost and time savings</li>
+          <li>policy and standards adoption</li>
+          <li>dataset and model reuse</li>
+          <li>API and open data analytics</li>
           <li>CO₂ impacts from compute</li>
         </ul>
       </div>
 
-      <!-- Qualitative -->
       <div style="background:#f9fafb; padding:10px; border-radius:8px;">
         <strong>Qualitative (Signal / Lagging)</strong>
         <ul style="padding-left:18px; line-height:1.5; margin-top:6px;">
           <li>staff surveys</li>
-          <li>training & community participation</li>
+          <li>training and community participation</li>
           <li>user research logs</li>
-          <li>case studies, reuse stories</li>
+          <li>case studies and reuse stories</li>
         </ul>
       </div>
 
-      <!-- Economic -->
       <div style="background:#f9fafb; padding:10px; border-radius:8px;">
-        <strong>Economic & experimental (Lagging)</strong>
+        <strong>Economic and experimental (Lagging)</strong>
         <ul style="padding-left:18px; line-height:1.5; margin-top:6px;">
-          <li>BCR & NPV analysis</li>
+          <li>benefit cost ratio and NPV analysis</li>
           <li>counterfactuals</li>
           <li>experimental methods</li>
         </ul>
@@ -1211,7 +1220,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
     </p>
 
     <p style="font-size:13px; color:#444; line-height:1.6;">
-      It is not a data management or governance framework (e.g., DAMA or DCAM) and does not replace organisational governance,
+      It is not a data management or governance framework (for example DAMA or DCAM) and does not replace organisational governance,
       risk controls or formal valuation models.
     </p>
 
@@ -1234,8 +1243,8 @@ Data value is hard to prove in federated environments. This dashboard offers a p
 
     <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:6px; font-size:11px;">
       <span class="pill">Metric catalogue by level</span>
-      <span class="pill">Inputs, outputs, outcomes &amp; impact</span>
-      <span class="pill">Use with mixed-method evidence (see methodology)</span>
+      <span class="pill">Inputs, outputs, outcomes and impact</span>
+      <span class="pill">Use with mixed method evidence (see methodology)</span>
     </div>
   </div>
 
@@ -1248,11 +1257,11 @@ Data value is hard to prove in federated environments. This dashboard offers a p
 
     <p style="font-size:13px; color:#444; line-height:1.55; margin-top:4px;">
       These metrics are examples, not a prescription. They show how <strong>leading</strong>, <strong>signal</strong> and
-      <strong>lagging</strong> indicators can be combined to tell a coherent story from foundations to outcomes and impact,
-      and should be adapted to your context, evidence sources and constraints.
+      <strong>lagging</strong> indicators can be combined to tell a coherent story from foundations to outcomes and impact.
+      They should be adapted to your context, evidence sources and constraints.
     </p>
 
-    <div class="impact-block-title">Level 1 foundations – example metrics</div>
+    <div class="impact-block-title">Level 1 foundations - example metrics</div>
     <table class="maturity-table">
       <thead>
         <tr>
@@ -1268,7 +1277,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
           <td>Strategy</td>
           <td><span class="badge badge-leading">LEADING</span></td>
           <td class="maturity-notes">
-            Extent to which cross-cutting data priorities and a single roadmap are agreed, understood and used to shape portfolios.
+            Extent to which cross cutting data priorities and a single roadmap are agreed, understood and used to shape portfolios.
           </td>
         </tr>
         <tr>
@@ -1292,11 +1301,11 @@ Data value is hard to prove in federated environments. This dashboard offers a p
           <td>Community</td>
           <td><span class="badge badge-leading">LEADING</span></td>
           <td class="maturity-notes">
-            Breadth, activity and resilience of data and analytics communities of practice, including cross-organisational groups.
+            Breadth, activity and resilience of data and analytics communities of practice, including cross organisational groups.
           </td>
         </tr>
         <tr>
-          <td>Engagement demand &amp; support</td>
+          <td>Engagement demand and support</td>
           <td>Engagement</td>
           <td><span class="badge badge-leading">LEADING</span></td>
           <td class="maturity-notes">
@@ -1319,7 +1328,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
       <tbody>
         <tr>
           <td>MVP Enterprise Data Catalogue</td>
-          <td>Percent mission-critical datasets covered</td>
+          <td>Percent mission critical datasets covered</td>
           <td class="maturity-notes">
             Catalogue usage; contributing ALBs; metadata completeness scores.
           </td>
@@ -1334,17 +1343,17 @@ Data value is hard to prove in federated environments. This dashboard offers a p
           <td><span class="badge badge-leading">LEADING</span></td>
         </tr>
         <tr>
-          <td>Data festival &amp; showcase</td>
+          <td>Data festival and showcase</td>
           <td>Attendance and participation</td>
           <td class="maturity-notes">
-            Cross-government representation; number of case studies shared; follow-up requests for support.
+            Cross government representation; number of case studies shared; follow up requests for support.
           </td>
           <td><span class="badge badge-leading">LEADING</span></td>
         </tr>
       </tbody>
     </table>
 
-    <div class="impact-block-title" style="margin-top:14px;">Level 2 maturity – metrics by theme</div>
+    <div class="impact-block-title" style="margin-top:14px;">Level 2 maturity - metrics by theme</div>
     <table class="maturity-table">
       <thead>
         <tr>
@@ -1375,7 +1384,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
           <td>Leadership</td>
           <td>Use of structured data packs in leadership forums</td>
           <td class="maturity-notes">
-            Proportion of leadership discussions explicitly referencing data-driven trade-offs.
+            Proportion of leadership discussions explicitly referencing data driven trade offs.
           </td>
           <td><span class="badge badge-leading">LEADING</span></td>
         </tr>
@@ -1389,7 +1398,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
         </tr>
         <tr>
           <td>Tools</td>
-          <td>Use of approved self-service analytics platforms</td>
+          <td>Use of approved self service analytics platforms</td>
           <td class="maturity-notes">
             Number of reusable dashboards and tools in active use across teams and ALBs.
           </td>
@@ -1397,7 +1406,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
         </tr>
         <tr>
           <td>Skills</td>
-          <td>Completion of data &amp; AI literacy pathways outside specialist teams</td>
+          <td>Completion of data and AI literacy pathways outside specialist teams</td>
           <td class="maturity-notes">
             Participation in communities of practice and peer learning events.
           </td>
@@ -1406,7 +1415,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
       </tbody>
     </table>
 
-    <div class="impact-block-title" style="margin-top:14px;">Level 3 outcomes and impact – example metrics</div>
+    <div class="impact-block-title" style="margin-top:14px;">Level 3 outcomes and impact - example metrics</div>
     <table class="maturity-table">
       <thead>
         <tr>
@@ -1448,7 +1457,7 @@ Data value is hard to prove in federated environments. This dashboard offers a p
           </td>
         </tr>
         <tr>
-          <td>Time savings (outcome &amp; impact)</td>
+          <td>Time savings (outcome and impact)</td>
           <td><span class="badge badge-lagging">LAGGING</span></td>
           <td class="maturity-notes">
             Staff time saved through reuse, automation and standardised pipelines.
@@ -1461,10 +1470,10 @@ Data value is hard to prove in federated environments. This dashboard offers a p
           <td>Public good impact (impact)</td>
           <td><span class="badge badge-lagging">LAGGING</span></td>
           <td class="maturity-notes">
-            Contribution to wider outcomes, transparency and cross-government reuse.
+            Contribution to wider outcomes, transparency and cross government reuse.
           </td>
           <td class="maturity-notes">
-            Strong cross-government contribution (e.g. shared flood models or land data assets).
+            Strong cross government contribution (for example shared flood models or land data assets).
           </td>
         </tr>
       </tbody>
@@ -1478,9 +1487,9 @@ Data value is hard to prove in federated environments. This dashboard offers a p
     <span class="tag" style="margin-top:10px;">METRIC CATALOGUE</span>
   </div>
 
-  <!-- CARD 2: Theory of change by foundation – visual lanes -->
+  <!-- THEORY OF CHANGE -->
   <h2 style="font-size:20px; font-weight:700; margin-top:24px; margin-bottom:6px;">
-    Theory of change – from foundations to public impact
+    Theory of change: from foundations to public impact
   </h2>
 
   <p style="font-size:14px; color:#444; margin-top:0; margin-bottom:12px;">
@@ -1511,400 +1520,399 @@ Data value is hard to prove in federated environments. This dashboard offers a p
     </div>
   </div>
 
-<!-- COLUMN HEADERS -->
-<div class="toc-lane-header toc-lane-grid" style="margin-top:10px;">
-  <div></div>
-  <div class="toc-lane-header-stage">
-    <span class="toc-lane-pill">Inputs</span>
-    <span>Effort</span>
-  </div>
-  <div class="toc-lane-header-stage">
-    <span class="toc-lane-pill">Outputs</span>
-    <span>What is built</span>
-  </div>
-  <div class="toc-lane-header-stage">
-    <span class="toc-lane-pill">Outcomes</span>
-    <span>Behaviour shift</span>
-  </div>
-  <div class="toc-lane-header-stage">
-    <span class="toc-lane-pill">Impact</span>
-    <span>Public value</span>
-  </div>
-</div>
-
-<div class="toc-lane-arrow-row">
-  <div></div>
-  <div>Inputs →</div>
-  <div>Outputs →</div>
-  <div>Outcomes →</div>
-  <div>Impact</div>
-</div>
-
-<!-- GRID -->
-<div class="toc-lane-grid">
-
-  <!-- Strategy -->
-  <div class="toc-foundation-name">Strategy</div>
-  <div class="toc-stage toc-stage-input">
-    <ul>
-      <li>Priority setting and alignment time</li>
-      <li>Maturity assessments</li>
-      <li>Cross-team workshops</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-output">
-    <ul>
-      <li>Shared roadmap</li>
-      <li>Single view of priorities</li>
-      <li>Priority datasets identified</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-outcome">
-    <ul>
-      <li>Teams choose the same priorities</li>
-      <li>Duplicated work and bids reduce</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-impact">
-    <ul>
-      <li>Money savings and smarter investment</li>
-      <li>More budget reaching priority outcomes</li>
-    </ul>
+  <!-- COLUMN HEADERS -->
+  <div class="toc-lane-header toc-lane-grid" style="margin-top:10px;">
+    <div></div>
+    <div class="toc-lane-header-stage">
+      <span class="toc-lane-pill">Inputs</span>
+      <span>Effort</span>
+    </div>
+    <div class="toc-lane-header-stage">
+      <span class="toc-lane-pill">Outputs</span>
+      <span>What is built</span>
+    </div>
+    <div class="toc-lane-header-stage">
+      <span class="toc-lane-pill">Outcomes</span>
+      <span>Behaviour shift</span>
+    </div>
+    <div class="toc-lane-header-stage">
+      <span class="toc-lane-pill">Impact</span>
+      <span>Public value</span>
+    </div>
   </div>
 
-  <!-- Leadership -->
-  <div class="toc-foundation-name">Leadership</div>
-  <div class="toc-stage toc-stage-input">
-    <ul>
-      <li>Governance and leadership time</li>
-      <li>Mapping owners and stewards</li>
-      <li>Agreeing decision rights</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-output">
-    <ul>
-      <li>Ownership maps</li>
-      <li>Data owners and stewards confirmed</li>
-      <li>Decision rights defined</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-outcome">
-    <ul>
-      <li>Issues resolved faster</li>
-      <li>Decisions use shared evidence</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-impact">
-    <ul>
-      <li>Better, earlier decisions</li>
-      <li>Risks to public value tackled sooner</li>
-    </ul>
+  <div class="toc-lane-arrow-row">
+    <div></div>
+    <div>Inputs →</div>
+    <div>Outputs →</div>
+    <div>Outcomes →</div>
+    <div>Impact</div>
   </div>
 
-  <!-- Foundation -->
-  <div class="toc-foundation-name">Foundation</div>
-  <div class="toc-stage toc-stage-input">
-    <ul>
-      <li>Platform investment</li>
-      <li>Engineering time</li>
-      <li>Standards and policy work</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-output">
-    <ul>
-      <li>Shared platforms and pipelines</li>
-      <li>Common standards and policies</li>
-      <li>Shared reference data</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-outcome">
-    <ul>
-      <li>Less time spent fixing data</li>
-      <li>Smoother, reusable data flows</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-impact">
-    <ul>
-      <li>Time savings and operational efficiency</li>
-      <li>Less manual rework and fewer one off builds</li>
-    </ul>
+  <!-- GRID -->
+  <div class="toc-lane-grid">
+
+    <!-- Strategy -->
+    <div class="toc-foundation-name">Strategy</div>
+    <div class="toc-stage toc-stage-input">
+      <ul>
+        <li>Priority setting and alignment time</li>
+        <li>Maturity assessments</li>
+        <li>Cross team workshops</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-output">
+      <ul>
+        <li>Shared roadmap</li>
+        <li>Single view of priorities</li>
+        <li>Priority datasets identified</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-outcome">
+      <ul>
+        <li>Teams choose the same priorities</li>
+        <li>Duplicated work and bids reduce</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-impact">
+      <ul>
+        <li>Money savings and smarter investment</li>
+        <li>More budget reaching priority outcomes</li>
+      </ul>
+    </div>
+
+    <!-- Shared leadership -->
+    <div class="toc-foundation-name">Shared leadership</div>
+    <div class="toc-stage toc-stage-input">
+      <ul>
+        <li>Governance and leadership time</li>
+        <li>Mapping owners and stewards</li>
+        <li>Agreeing decision rights</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-output">
+      <ul>
+        <li>Ownership maps</li>
+        <li>Data owners and stewards confirmed</li>
+        <li>Decision rights defined</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-outcome">
+      <ul>
+        <li>Issues resolved faster</li>
+        <li>Decisions use shared evidence</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-impact">
+      <ul>
+        <li>Better, earlier decisions</li>
+        <li>Risks to public value tackled sooner</li>
+      </ul>
+    </div>
+
+    <!-- Foundation -->
+    <div class="toc-foundation-name">Foundation</div>
+    <div class="toc-stage toc-stage-input">
+      <ul>
+        <li>Platform investment</li>
+        <li>Engineering time</li>
+        <li>Standards and policy work</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-output">
+      <ul>
+        <li>Shared platforms and pipelines</li>
+        <li>Common standards and policies</li>
+        <li>Shared reference data</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-outcome">
+      <ul>
+        <li>Less time spent fixing data</li>
+        <li>Smoother, reusable data flows</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-impact">
+      <ul>
+        <li>Time savings and operational efficiency</li>
+        <li>Less manual rework and fewer one off builds</li>
+      </ul>
+    </div>
+
+    <!-- Community -->
+    <div class="toc-foundation-name">Community</div>
+    <div class="toc-stage toc-stage-input">
+      <ul>
+        <li>Contributor time</li>
+        <li>Meetups and clinics</li>
+        <li>Maintaining shared repositories</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-output">
+      <ul>
+        <li>Reusable patterns and notebooks</li>
+        <li>Shared guidance and toolkits</li>
+        <li>Visible community spaces</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-outcome">
+      <ul>
+        <li>Teams solve problems faster together</li>
+        <li>Analysis becomes more consistent</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-impact">
+      <ul>
+        <li>Peer to peer capability uplift</li>
+        <li>Better and more reliable insights</li>
+      </ul>
+    </div>
+
+    <!-- Engagement -->
+    <div class="toc-foundation-name">Engagement</div>
+    <div class="toc-stage toc-stage-input">
+      <ul>
+        <li>Events and clinics</li>
+        <li>Newsletters and communications</li>
+        <li>Onboarding and support time</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-output">
+      <ul>
+        <li>Clear front doors into services</li>
+        <li>Onboarding routes and FAQs</li>
+        <li>Regular engagement events</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-outcome">
+      <ul>
+        <li>Teams engage earlier and more often</li>
+        <li>Adoption and confidence in shared services grow</li>
+      </ul>
+    </div>
+    <div class="toc-stage toc-stage-impact">
+      <ul>
+        <li>Cross functional service improvement</li>
+        <li>More joined up workflows and evidence use</li>
+      </ul>
+    </div>
   </div>
 
-  <!-- Community -->
-  <div class="toc-foundation-name">Community</div>
-  <div class="toc-stage toc-stage-input">
-    <ul>
-      <li>Contributor time</li>
-      <li>Meetups and clinics</li>
-      <li>Maintaining shared repositories</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-output">
-    <ul>
-      <li>Reusable patterns and notebooks</li>
-      <li>Shared guidance and toolkits</li>
-      <li>Visible community spaces</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-outcome">
-    <ul>
-      <li>Teams solve problems faster together</li>
-      <li>Analysis becomes more consistent</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-impact">
-    <ul>
-      <li>Peer to peer capability uplift</li>
-      <li>Better and more reliable insights</li>
-    </ul>
-  </div>
-
-  <!-- Engagement -->
-  <div class="toc-foundation-name">Engagement</div>
-  <div class="toc-stage toc-stage-input">
-    <ul>
-      <li>Events and clinics</li>
-      <li>Newsletters and comms</li>
-      <li>Onboarding and support time</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-output">
-    <ul>
-      <li>Clear front doors into services</li>
-      <li>Onboarding routes and FAQs</li>
-      <li>Regular engagement events</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-outcome">
-    <ul>
-      <li>Teams engage earlier and more often</li>
-      <li>Adoption and confidence in shared services grow</li>
-    </ul>
-  </div>
-  <div class="toc-stage toc-stage-impact">
-    <ul>
-      <li>Cross functional service improvement</li>
-      <li>More joined up workflows and evidence use</li>
-    </ul>
-  </div>
-
+  <!-- BIAS REMINDERS -->
   <section id="bias-reminders">
-  <h2 class="section-title">Bias reminders</h2>
-  <p class="section-subtitle">
-    Use these prompts when interpreting diagnostics and selecting ValueLine shifts.
-  </p>
+    <h2 class="section-title">Bias reminders</h2>
+    <p class="section-subtitle">
+      Use these prompts when interpreting diagnostics and selecting ValueLine shifts.
+    </p>
 
-  <div class="bias-grid">
+    <div class="bias-grid">
 
-    <!-- Cobra effect -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Cb</div>
-        <h3>Cobra effect</h3>
-      </div>
+      <!-- Cobra effect -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Cb</div>
+          <h3>Cobra effect</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Incentives create unwanted behaviour.</p>
+        <h4>Risk</h4>
+        <p>Incentives create unwanted behaviour.</p>
 
-      <h4>How it appears</h4>
-      <p>Focus on outputs such as dashboards or datasets instead of real value.</p>
+        <h4>How it appears</h4>
+        <p>Focus on outputs such as dashboards or datasets instead of real value.</p>
 
-      <h4>Mitigation</h4>
-      <p>Use outcome indicators and feedback loops to ensure value is created.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Use outcome indicators and feedback loops to ensure value is created.</p>
+      </article>
 
-    <!-- Goodhart's law -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Gh</div>
-        <h3>Goodhart's law</h3>
-      </div>
+      <!-- Goodhart's law -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Gh</div>
+          <h3>Goodhart's law</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Measures become targets and lose meaning.</p>
+        <h4>Risk</h4>
+        <p>Measures become targets and lose meaning.</p>
 
-      <h4>How it appears</h4>
-      <p>Maturity scores are inflated or dashboards are designed to stay green.</p>
+        <h4>How it appears</h4>
+        <p>Maturity scores are inflated or dashboards are designed to stay green.</p>
 
-      <h4>Mitigation</h4>
-      <p>Use shift indicators and test what the metric actually reveals.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Use shift indicators and test what the metric actually reveals.</p>
+      </article>
 
-    <!-- Availability bias -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Av</div>
-        <h3>Availability bias</h3>
-      </div>
+      <!-- Availability bias -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Av</div>
+          <h3>Availability bias</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Recent or memorable issues dominate judgement.</p>
+        <h4>Risk</h4>
+        <p>Recent or memorable issues dominate judgement.</p>
 
-      <h4>How it appears</h4>
-      <p>Recent crises or loud anecdotes are treated as enterprise truth.</p>
+        <h4>How it appears</h4>
+        <p>Recent crises or loud anecdotes are treated as enterprise truth.</p>
 
-      <h4>Mitigation</h4>
-      <p>Look across all teams to find consistent patterns and signals.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Look across all teams to find consistent patterns and signals.</p>
+      </article>
 
-    <!-- Present bias -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Pr</div>
-        <h3>Present bias</h3>
-      </div>
+      <!-- Present bias -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Pr</div>
+          <h3>Present bias</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Short term wins over long term value.</p>
+        <h4>Risk</h4>
+        <p>Short term wins over long term value.</p>
 
-      <h4>How it appears</h4>
-      <p>Shiny use cases are prioritised over data quality or standards.</p>
+        <h4>How it appears</h4>
+        <p>Shiny use cases are prioritised over data quality or standards.</p>
 
-      <h4>Mitigation</h4>
-      <p>Show trade offs and connect foundations to later speed.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Show trade offs and connect foundations to later speed.</p>
+      </article>
 
-    <!-- Confirmation bias -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Cf</div>
-        <h3>Confirmation bias</h3>
-      </div>
+      <!-- Confirmation bias -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Cf</div>
+          <h3>Confirmation bias</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Only looking for evidence that matches existing views.</p>
+        <h4>Risk</h4>
+        <p>Only looking for evidence that matches existing views.</p>
 
-      <h4>How it appears</h4>
-      <p>Data quality issues are rejected or AI is seen as the answer before diagnosis.</p>
+        <h4>How it appears</h4>
+        <p>Data quality issues are rejected or AI is seen as the answer before diagnosis.</p>
 
-      <h4>Mitigation</h4>
-      <p>Use challenge questions and search for evidence that contradicts assumptions.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Use challenge questions and search for evidence that contradicts assumptions.</p>
+      </article>
 
-    <!-- False precision -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Fp</div>
-        <h3>False precision</h3>
-      </div>
+      <!-- False precision -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Fp</div>
+          <h3>False precision</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Believing complex systems can be quantified exactly.</p>
+        <h4>Risk</h4>
+        <p>Believing complex systems can be quantified exactly.</p>
 
-      <h4>How it appears</h4>
-      <p>Over confident scoring or narrow maturity levels without evidence.</p>
+        <h4>How it appears</h4>
+        <p>Over confident scoring or narrow maturity levels without evidence.</p>
 
-      <h4>Mitigation</h4>
-      <p>Use ranges, confidence levels and uncertainty notes.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Use ranges, confidence levels and uncertainty notes.</p>
+      </article>
 
-    <!-- Survivorship bias -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Sv</div>
-        <h3>Survivorship bias</h3>
-      </div>
+      <!-- Survivorship bias -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Sv</div>
+          <h3>Survivorship bias</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Learning from winners but ignoring the long tail.</p>
+        <h4>Risk</h4>
+        <p>Learning from winners but ignoring the long tail.</p>
 
-      <h4>How it appears</h4>
-      <p>High performers are copied without understanding system constraints.</p>
+        <h4>How it appears</h4>
+        <p>High performers are copied without understanding system constraints.</p>
 
-      <h4>Mitigation</h4>
-      <p>Compare all teams and look for structural barriers.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Compare all teams and look for structural barriers.</p>
+      </article>
 
-    <!-- Optimism bias -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Op</div>
-        <h3>Optimism bias</h3>
-      </div>
+      <!-- Optimism bias -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Op</div>
+          <h3>Optimism bias</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Underestimating cost, time and complexity.</p>
+        <h4>Risk</h4>
+        <p>Underestimating cost, time and complexity.</p>
 
-      <h4>How it appears</h4>
-      <p>Ambitious timelines without enough resource or sequencing.</p>
+        <h4>How it appears</h4>
+        <p>Ambitious timelines without enough resource or sequencing.</p>
 
-      <h4>Mitigation</h4>
-      <p>Use pre-mortems and delivery risk checks.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Use pre mortems and delivery risk checks.</p>
+      </article>
 
-    <!-- Sunk cost fallacy -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Sc</div>
-        <h3>Sunk cost fallacy</h3>
-      </div>
+      <!-- Sunk cost fallacy -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Sc</div>
+          <h3>Sunk cost fallacy</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Past investment drives future decisions.</p>
+        <h4>Risk</h4>
+        <p>Past investment drives future decisions.</p>
 
-      <h4>How it appears</h4>
-      <p>Legacy platforms or failing projects are kept alive because of prior spend.</p>
+        <h4>How it appears</h4>
+        <p>Legacy platforms or failing projects are kept alive because of prior spend.</p>
 
-      <h4>Mitigation</h4>
-      <p>Use stop criteria and review options independently of history.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Use stop criteria and review options independently of history.</p>
+      </article>
 
-    <!-- Halo effect -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Hl</div>
-        <h3>Halo effect</h3>
-      </div>
+      <!-- Halo effect -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Hl</div>
+          <h3>Halo effect</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Overgeneralising from strong teams or leaders.</p>
+        <h4>Risk</h4>
+        <p>Overgeneralising from strong teams or leaders.</p>
 
-      <h4>How it appears</h4>
-      <p>Champions are used to represent system maturity.</p>
+        <h4>How it appears</h4>
+        <p>Champions are used to represent system maturity.</p>
 
-      <h4>Mitigation</h4>
-      <p>Look for system wide indicators and variability.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Look for system wide indicators and variability.</p>
+      </article>
 
-    <!-- Complexity blindness -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Cx</div>
-        <h3>Complexity blindness</h3>
-      </div>
+      <!-- Complexity blindness -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Cx</div>
+          <h3>Complexity blindness</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Ignoring dependencies across culture, skills, governance and platforms.</p>
+        <h4>Risk</h4>
+        <p>Ignoring dependencies across culture, skills, governance and platforms.</p>
 
-      <h4>How it appears</h4>
-      <p>Shifts are treated as isolated actions.</p>
+        <h4>How it appears</h4>
+        <p>Shifts are treated as isolated actions.</p>
 
-      <h4>Mitigation</h4>
-      <p>Use causal links and read across to understand enablers.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Use causal links and read across to understand enablers.</p>
+      </article>
 
-    <!-- Linear thinking -->
-    <article class="bias-card">
-      <div class="bias-card-header">
-        <div class="bias-pill">Ln</div>
-        <h3>Linear thinking</h3>
-      </div>
+      <!-- Linear thinking -->
+      <article class="bias-card">
+        <div class="bias-card-header">
+          <div class="bias-pill">Ln</div>
+          <h3>Linear thinking</h3>
+        </div>
 
-      <h4>Risk</h4>
-      <p>Expecting smooth, predictable progress.</p>
+        <h4>Risk</h4>
+        <p>Expecting smooth, predictable progress.</p>
 
-      <h4>How it appears</h4>
-      <p>Culture or governance maturity is assumed to move step by step.</p>
+        <h4>How it appears</h4>
+        <p>Culture or governance maturity is assumed to move step by step.</p>
 
-      <h4>Mitigation</h4>
-      <p>Plan for dips, pauses and non linear change.</p>
-    </article>
+        <h4>Mitigation</h4>
+        <p>Plan for dips, pauses and non linear change.</p>
+      </article>
 
-  </div>
-</section>
-
-
-
+    </div>
+  </section>
 
   <footer>
     Metric catalogue and theory of change for the ValueLine: Data to Impact Model. Example department only, not real performance data.
@@ -1913,4 +1921,3 @@ Data value is hard to prove in federated environments. This dashboard offers a p
 
 </body>
 </html>
-
