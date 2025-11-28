@@ -12,7 +12,7 @@ ValueLine is a practical methodology, framing tool and dashboard that gives data
 
 ---
 
-## Quick navigation
+## Navigation
 
 - [Concept in 30 seconds](#concept-in-30-seconds)
 - [1. What problem this model solves](#1-what-problem-this-model-solves)
@@ -38,7 +38,8 @@ That leads to misaligned expectations, duplicated effort, slower impact and resu
 
 > ValueLine brings together a causal model, a delivery focussed dashboard and a lightweight methodology to show where value is emerging, how maturity is shifting and where leadership action is needed to accelerate the path to impact.
 
-It turns data strategy into something *live and usable* — surfacing early signals of change and creating a shared picture of progress across a federated organisation, reducing narrative drift and making alignment easier to sustain.
+It makes data strategy practical and trackable, surfacing early signals and keeping federated teams aligned around a shared picture of progress.
+
 
 ---
 
