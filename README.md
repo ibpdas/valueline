@@ -7,7 +7,7 @@
 <h1 align="center">ValueLine: A Clearer Line of Sight from Data to Impact</h1>
 
 <p align="center">
-ValueLine is a practical methodology, framing tool and dashboard that gives data teams a clearer line of sight from data to impact and accelerates progress where it matters most
+ValueLine is an integrated framework that aligns strategy, diagnostics and measurement to create a clear line of sight from data foundations to public impact and to accelerate progress where it matters most.
 </p>
 
 ---
