@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ibpdas.github.io/valueline/" target="_blank">
+  <a href="https://ibpdas.github.io/ValueLine/" target="_blank">
     <img src="https://img.shields.io/badge/Launch%20ValueLine-Live%20Demo-blue?style=for-the-badge" alt="Live Demo">
   </a>
 </p>
