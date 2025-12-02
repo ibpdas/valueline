@@ -222,7 +222,7 @@ ValueLine uses a **mixed-method evidence model** to build a rounded, credible pi
 
 - **Quantitative** — adoption, reuse, usage, cost reduction, NPV, BCRs  
 - **Qualitative** — sentiment, interviews, case studies, user research  
-- **Experimental** — counterfactuals, controlled comparisons, before / after tests   
+- **Experimental** — counterfactuals, controlled comparisons, partner / industry benchmarks and / or examples  
 
 No single metric captures capability or value.  
 Mixed evidence creates a **more robust and less fragile** narrative.
