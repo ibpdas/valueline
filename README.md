@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="https://raw.githubusercontent.com/ibpdas/valueline/main/assets/valueline.png" width="900" alt="ValueLine Banner">
+</p>
+
+<p align="center">
   <a href="https://ibpdas.github.io/valueline/" target="_blank">
     <img src="https://img.shields.io/badge/Launch%20ValueLine-Live%20Demo-blue?style=for-the-badge" alt="Live Demo">
   </a>
