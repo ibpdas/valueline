@@ -99,7 +99,7 @@ The strategic logic model explains how **foundations enable maturity**, and how 
 Shared directions, clearer ownership, common capabilities, sideways communities and engagement.
 
 **Level 2 — Maturity**  
-Coherent, reusable data; interoperable systems; integrated tools; confident data culture; and everyday data informed decisions.
+Coherent, reusable data, integrated tools, confident data culture, and everyday data informed decisions.
 
 **Level 3 — Outcomes & impact**  
 Efficiency, productivity, service quality, user satisfaction and public good impact.
@@ -125,11 +125,11 @@ ValueLine focuses on **shifts**, not maturity scores.
 
 ### **Level 2 — Maturity shifts (aligned to 2023 Government Data Maturity themes)**
 
-- **Uses** — reactive reporting → proactive, integrated use of data in decisions  
-- **Data** — inconsistent, siloed → coherent, reusable and interoperable  
-- **Leadership** — passive awareness → active sponsorship and clear expectations  
-- **Culture** — low confidence → everyday, confident data-informed decisions  
-- **Tools** — fragmented, hard to find → discoverable, integrated and self-service  
+- **Uses** — reactive reporting → proactive, routine use of data in decisions  
+- **Data** — hard to find and inconsistent, with perceived legal barriers → easy to discover, easy to reuse and confidently shared across domains  
+- **Leadership** — passive awareness → active sponsorship and role modelling   
+- **Culture** — low confidence and over caution → everyday, confident and responsible data use and sharing  
+- **Tools** — legacy heavy, fragmented, expert-led systems → simpler, joined up tools that reduce friction and support intuitive self service  
 - **Skills** — pockets of expertise → widespread literacy and continuous learning  
 
 ### **Level 3 — Outcome & impact shifts**
