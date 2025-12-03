@@ -11,19 +11,16 @@
 <h1 align="center">ValueLine: A clearer line of sight from data to impact</h1>
 
 <p align="center">
-A unified model for public sector data leaders to align strategy, diagnose progress and measure performance — creating a clearer link between foundations, maturity and outcomes.
+A unified system for public sector data leaders to align strategy, diagnose progress and measure performance — creating a clearer link between foundations, maturity and outcomes.
 </p>
 
 ---
 
-## Navigation
+## 🧭 Navigation
 
 - [Concept in 30 seconds](#concept-in-30-seconds)
 - [1. The problem ValueLine solves](#1-the-problem-valueline-solves)
 - [2. The three components](#2-the-three-components)
-  - [2.1 Strategic logic model](#21-strategic-logic-model)
-  - [2.2 Prioritisation & diagnostic framework](#22-prioritisation--diagnostic-framework)
-  - [2.3 Performance & learning dashboard model](#23-performance--learning-dashboard-model)
 - [3. Leadership value & responsibilities](#3-leadership-value--responsibilities)
 - [4. Why ValueLine works](#4-why-valueline-works)
 - [5. How to use the model](#5-how-to-use-the-model)
@@ -34,7 +31,7 @@ A unified model for public sector data leaders to align strategy, diagnose progr
 
 ---
 
-# Concept in 30 seconds
+# 📌 Concept in 30 seconds
 
 Public sector leaders care deeply about outcomes, but the connection between foundational data work and visible impact is often unclear.
 
