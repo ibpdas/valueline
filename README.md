@@ -231,10 +231,14 @@ ValueLine provides the structure that makes it possible.
 
 # 6. Status
 
-- ✅ Theory of change, metrics catalogue, bias prompt
+- ✅ Theory of change logic model  
 - ✅ HTML proof of concept dashboard  
-- 🟡 Excel & PowerPoint template (MVP)  
-- ⬜ Streamlit prototype (planned)  
+- 🟡 Excel & PowerPoint templates (alpha)  
+- ⬜ PowerBI dashboard (planned)
+- ⬜ Streamlit prototype (planned)
+
+### Related resources 
+- <a href="https://www.brighttalk.com/webcast/12405/602410" target="_blank">*Explaining Data Value*</a> talk
 
 ---
 
